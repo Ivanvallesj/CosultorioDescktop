@@ -1,5 +1,5 @@
-﻿using CosultorioDescktop.AdminData;
-using CosultorioDescktop.Models;
+﻿using ConsultorioDesktop.AdminData;
+using ConsultorioDesktop.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -8,7 +8,7 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
-namespace CosultorioDescktop.Forms
+namespace ConsultorioDesktop.Forms
 {
     public partial class FrmMenuPrincipal : Form
     {
@@ -46,7 +46,7 @@ namespace CosultorioDescktop.Forms
 
         private void pacientesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var frmPacientes = new FrmPacientes();
+            var frmPacientes = new FrmPacientes(new DbAdminPacientes());
             frmPacientes.ShowDialog();
         }
 

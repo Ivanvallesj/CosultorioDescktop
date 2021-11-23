@@ -1,4 +1,4 @@
-﻿using CosultorioDescktop.Models;
+﻿using ConsultorioDesktop.Models;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -9,7 +9,7 @@ using System.Text;
 using System.Windows.Forms;
 using System.Linq;
 
-namespace CosultorioDescktop.Forms
+namespace ConsultorioDesktop.Forms
 {
     public partial class FrmNuevoEditarPaciente : Form
     {

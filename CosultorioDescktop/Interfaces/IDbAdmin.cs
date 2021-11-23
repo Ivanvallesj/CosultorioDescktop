@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace CosultorioDescktop.Interfaces
+namespace ConsultorioDesktop.Interfaces
 {
     public interface IDbAdmin
     {

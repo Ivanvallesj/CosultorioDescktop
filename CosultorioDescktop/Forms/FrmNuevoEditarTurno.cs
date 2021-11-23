@@ -1,6 +1,6 @@
-﻿using CosultorioDescktop.AdminData;
-using CosultorioDescktop.Interfaces;
-using CosultorioDescktop.Models;
+﻿using ConsultorioDesktop.AdminData;
+using ConsultorioDesktop.Interfaces;
+using ConsultorioDesktop.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,7 +11,7 @@ using System.Windows.Forms;
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
 
-namespace CosultorioDescktop.Forms
+namespace ConsultorioDesktop.Forms
 {
     public partial class FrmNuevoEditarTurno : Form, IFormBase
 {

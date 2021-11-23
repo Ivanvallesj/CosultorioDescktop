@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace CosultorioDescktop.Models
+namespace ConsultorioDesktop.Models
 {
     public enum TipoUsuarioEnum
     {

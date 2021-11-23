@@ -1,5 +1,5 @@
 ﻿
-namespace CosultorioDescktop.Forms
+namespace ConsultorioDesktop.Forms
 {
     partial class FrmNuevoEditarUsuario
     {
@@ -29,6 +29,7 @@ namespace CosultorioDescktop.Forms
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmNuevoEditarUsuario));
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.cboTipoUsuario = new System.Windows.Forms.ComboBox();
@@ -131,6 +132,7 @@ namespace CosultorioDescktop.Forms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(430, 322);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnGuardar);
@@ -142,8 +144,9 @@ namespace CosultorioDescktop.Forms
             this.Controls.Add(this.lblContraseña);
             this.Controls.Add(this.lblUsers);
             this.Controls.Add(this.lblNombreUsuario);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmNuevoEditarUsuario";
-            this.Text = "FrmNuevoEditarUsuario";
+            this.Text = "Nuevo usuario";
             this.ResumeLayout(false);
             this.PerformLayout();
 

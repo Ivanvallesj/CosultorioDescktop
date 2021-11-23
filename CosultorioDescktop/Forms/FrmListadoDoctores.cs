@@ -1,4 +1,4 @@
-﻿using CosultorioDescktop.Models;
+﻿using ConsultorioDesktop.Models;
 using Microsoft.Reporting.WinForms;
 using System;
 using System.Collections.Generic;
@@ -10,7 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace CosultorioDescktop.Forms
+namespace ConsultorioDesktop.Forms
 {
     public partial class FrmListadoDoctores : Form
     {

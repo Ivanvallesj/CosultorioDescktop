@@ -10,7 +10,7 @@
 
 #pragma warning disable 1591
 
-namespace CosultorioDescktop {
+namespace ConsultorioDesktop {
     
     
     /// <summary>
@@ -959,7 +959,7 @@ namespace CosultorioDescktop {
         }
     }
 }
-namespace CosultorioDescktop.DataSetDoctoresTableAdapters {
+namespace ConsultorioDesktop.DataSetDoctoresTableAdapters {
     
     
     /// <summary>

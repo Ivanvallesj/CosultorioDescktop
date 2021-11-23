@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Text;
 
-namespace CosultorioDescktop.Models
+namespace ConsultorioDesktop.Models
 {
     public class Paciente : ModeloBase
     {
@@ -30,5 +30,6 @@ namespace CosultorioDescktop.Models
         public ObraSocialEnum ObraSocial { get; set; }
         public int DoctorId { get; set; }
         public Doctor Doctor { get; set; }
+        //public ICollection<TurnoDetalles> TurnoDetalles { get; set; }
     }
 }

@@ -1,5 +1,5 @@
 ﻿
-namespace CosultorioDescktop.Forms
+namespace ConsultorioDesktop.Forms
 {
     partial class FrmCambioContrasena
     {
@@ -142,6 +142,7 @@ namespace CosultorioDescktop.Forms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(459, 318);
             this.Controls.Add(this.lblUsuarioActivo);
             this.Controls.Add(this.txtConfirmacionContraseña);

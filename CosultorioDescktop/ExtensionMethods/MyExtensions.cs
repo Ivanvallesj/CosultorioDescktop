@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Windows.Forms;
 
-namespace CosultorioDescktop.ExtensionMethods
+namespace ConsultorioDesktop.ExtensionMethods
 {
     public static class MyExtensions
     {

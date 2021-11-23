@@ -1,5 +1,5 @@
 ﻿
-namespace CosultorioDescktop.Forms
+namespace ConsultorioDesktop.Forms
 {
     partial class FrmListadoDoctores
     {

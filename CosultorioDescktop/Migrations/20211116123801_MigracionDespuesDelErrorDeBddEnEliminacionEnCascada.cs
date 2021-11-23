@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace CosultorioDescktop.Migrations
+namespace ConsultorioDesktop.Migrations
 {
     public partial class MigracionDespuesDelErrorDeBddEnEliminacionEnCascada : Migration
     {

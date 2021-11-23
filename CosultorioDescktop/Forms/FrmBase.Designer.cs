@@ -1,5 +1,5 @@
 ﻿
-namespace CosultorioDescktop.Forms
+namespace ConsultorioDesktop.Forms
 {
     partial class FrmBase
     {
@@ -104,6 +104,7 @@ namespace CosultorioDescktop.Forms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(793, 348);
             this.Controls.Add(this.chkVerEliminados);
             this.Controls.Add(this.BtnEliminar);
@@ -112,7 +113,7 @@ namespace CosultorioDescktop.Forms
             this.Controls.Add(this.TxtBusqueda);
             this.Controls.Add(this.grid);
             this.Name = "FrmBase";
-            this.Text = "FrmBase";
+            this.Text = "Formulario Base";
             ((System.ComponentModel.ISupportInitialize)(this.grid)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

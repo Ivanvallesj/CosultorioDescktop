@@ -1,10 +1,10 @@
-﻿using CosultorioDescktop.Core;
+﻿using ConsultorioDesktop.Core;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace CosultorioDescktop.Models
+namespace ConsultorioDesktop.Models
 {
     public class ConsultorioContext : DbContext
     {

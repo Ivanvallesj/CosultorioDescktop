@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
-using CosultorioDescktop.Core;
-using CosultorioDescktop.ExtensionMethods;
+using ConsultorioDesktop.Core;
+using ConsultorioDesktop.ExtensionMethods;
 
-namespace CosultorioDescktop.Forms
+namespace ConsultorioDesktop.Forms
 {
     public partial class FrmParametros : Form
     {

@@ -1,5 +1,5 @@
-﻿using CosultorioDescktop.AdminData;
-using CosultorioDescktop.Models;
+﻿using ConsultorioDesktop.AdminData;
+using ConsultorioDesktop.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,7 +9,7 @@ using System.Text;
 using System.Windows.Forms;
 
 
-namespace CosultorioDescktop.Forms
+namespace ConsultorioDesktop.Forms
 {
     public partial class FrmNuevoEditarDoctor : Form
     {

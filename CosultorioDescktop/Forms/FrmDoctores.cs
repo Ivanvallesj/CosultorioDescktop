@@ -1,4 +1,4 @@
-﻿using CosultorioDescktop.Models;
+﻿using ConsultorioDesktop.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -7,12 +7,12 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using System.Linq;
-using CosultorioDescktop.AdminData;
-using CosultorioDescktop.ExtensionMethods;
+using ConsultorioDesktop.AdminData;
+using ConsultorioDesktop.ExtensionMethods;
 using Microsoft.EntityFrameworkCore;
-using CosultorioDescktop.Interfaces;
+using ConsultorioDesktop.Interfaces;
 
-namespace CosultorioDescktop.Forms
+namespace ConsultorioDesktop.Forms
 {
     public partial class FrmDoctores : Form, IFormBase
     {

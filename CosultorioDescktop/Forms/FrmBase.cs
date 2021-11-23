@@ -5,10 +5,10 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
-using CosultorioDescktop.ExtensionMethods;
-using CosultorioDescktop.Interfaces;
+using ConsultorioDesktop.ExtensionMethods;
+using ConsultorioDesktop.Interfaces;
 
-namespace CosultorioDescktop.Forms
+namespace ConsultorioDesktop.Forms
 {
     public partial class FrmBase : Form
     {

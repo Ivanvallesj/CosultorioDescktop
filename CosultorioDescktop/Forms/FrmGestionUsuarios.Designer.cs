@@ -1,5 +1,5 @@
 ﻿
-namespace CosultorioDescktop.Forms
+namespace ConsultorioDesktop.Forms
 {
     partial class FrmGestionUsuarios
     {
@@ -29,6 +29,7 @@ namespace CosultorioDescktop.Forms
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmGestionUsuarios));
             this.btnCambiarContraseña = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
             this.BtnEliminarUsuario = new System.Windows.Forms.Button();
@@ -91,7 +92,7 @@ namespace CosultorioDescktop.Forms
             // dataGridUsuarios
             // 
             this.dataGridUsuarios.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridUsuarios.BackgroundColor = System.Drawing.SystemColors.MenuHighlight;
+            this.dataGridUsuarios.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.dataGridUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridUsuarios.Location = new System.Drawing.Point(12, 30);
             this.dataGridUsuarios.Name = "dataGridUsuarios";
@@ -104,6 +105,7 @@ namespace CosultorioDescktop.Forms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(752, 374);
             this.Controls.Add(this.btnCambiarContraseña);
             this.Controls.Add(this.btnSalir);
@@ -111,6 +113,7 @@ namespace CosultorioDescktop.Forms
             this.Controls.Add(this.BtnEditarUsuario);
             this.Controls.Add(this.BtnAñadirUsuario);
             this.Controls.Add(this.dataGridUsuarios);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmGestionUsuarios";
             this.Text = "Furmulario de Usuarios";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridUsuarios)).EndInit();

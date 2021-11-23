@@ -1,5 +1,5 @@
 ﻿
-namespace CosultorioDescktop.Forms
+namespace ConsultorioDesktop.Forms
 {
     partial class FrmDoctores
     {
@@ -29,6 +29,7 @@ namespace CosultorioDescktop.Forms
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmDoctores));
             this.BtnAgregarPaciente = new System.Windows.Forms.Button();
             this.BtnEditarPaciente = new System.Windows.Forms.Button();
             this.BtnEliminarPaciente = new System.Windows.Forms.Button();
@@ -163,6 +164,7 @@ namespace CosultorioDescktop.Forms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(962, 499);
             this.Controls.Add(this.chkVerEliminados);
             this.Controls.Add(this.BtnAgregarPaciente);
@@ -175,6 +177,7 @@ namespace CosultorioDescktop.Forms
             this.Controls.Add(this.BtnEditar);
             this.Controls.Add(this.BtnNuevo);
             this.Controls.Add(this.GridDoctores);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmDoctores";
             this.Text = "Fromulario principal de Doctores ";
             ((System.ComponentModel.ISupportInitialize)(this.GridPacientes)).EndInit();

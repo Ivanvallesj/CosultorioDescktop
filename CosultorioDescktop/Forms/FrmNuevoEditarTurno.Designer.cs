@@ -1,5 +1,5 @@
 ﻿
-namespace CosultorioDescktop.Forms
+namespace ConsultorioDesktop.Forms
 {
     partial class FrmNuevoEditarTurno
     {
@@ -29,6 +29,7 @@ namespace CosultorioDescktop.Forms
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmNuevoEditarTurno));
             this.DtpFechaTurno = new System.Windows.Forms.DateTimePicker();
             this.LblFechaDeNacimiento = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -236,8 +237,9 @@ namespace CosultorioDescktop.Forms
             this.Controls.Add(this.label1);
             this.Controls.Add(this.DtpFechaTurno);
             this.Controls.Add(this.LblFechaDeNacimiento);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmNuevoEditarTurno";
-            this.Text = "FrmNuevoEditarTurno";
+            this.Text = "Formulario de turnos";
             ((System.ComponentModel.ISupportInitialize)(this.NumUpDownPrecio)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NumUpDownBonos)).EndInit();
             this.ResumeLayout(false);

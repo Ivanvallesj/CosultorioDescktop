@@ -491,7 +491,7 @@
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>DataSetDoctores</rd:DataSetName>
-        <rd:SchemaPath>C:\repos\CosultorioDescktop\CosultorioDescktop\DataSetDoctores.xsd</rd:SchemaPath>
+        <rd:SchemaPath>C:\repos\ConsultorioDesktop\ConsultorioDesktop\DataSetDoctores.xsd</rd:SchemaPath>
         <rd:TableName>Doctores</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>

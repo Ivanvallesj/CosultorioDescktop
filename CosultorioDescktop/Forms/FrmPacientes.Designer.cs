@@ -1,5 +1,5 @@
 ﻿
-namespace CosultorioDescktop.Forms
+namespace ConsultorioDesktop.Forms
 {
     partial class FrmPacientes
     {
@@ -29,15 +29,17 @@ namespace CosultorioDescktop.Forms
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPacientes));
             this.BtnAgregar = new System.Windows.Forms.Button();
-            this.GridVacunas = new System.Windows.Forms.DataGridView();
+            this.GridTurnos = new System.Windows.Forms.DataGridView();
             this.Grid = new System.Windows.Forms.DataGridView();
             this.BtnNuevo = new System.Windows.Forms.Button();
             this.BtnEditar = new System.Windows.Forms.Button();
             this.BtnEliminar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.TxtBusqueda = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.GridVacunas)).BeginInit();
+            this.chkVerEliminados = new System.Windows.Forms.CheckBox();
+            ((System.ComponentModel.ISupportInitialize)(this.GridTurnos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Grid)).BeginInit();
             this.SuspendLayout();
             // 
@@ -50,18 +52,18 @@ namespace CosultorioDescktop.Forms
             this.BtnAgregar.Text = "Cargar Turno";
             this.BtnAgregar.UseVisualStyleBackColor = true;
             // 
-            // GridVacunas
+            // GridTurnos
             // 
-            this.GridVacunas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.GridVacunas.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
-            this.GridVacunas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.GridVacunas.Location = new System.Drawing.Point(12, 249);
-            this.GridVacunas.Name = "GridVacunas";
-            this.GridVacunas.ReadOnly = true;
-            this.GridVacunas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.GridVacunas.Size = new System.Drawing.Size(582, 182);
-            this.GridVacunas.TabIndex = 18;
-            this.GridVacunas.Text = "dataGridView1";
+            this.GridTurnos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.GridTurnos.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
+            this.GridTurnos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.GridTurnos.Location = new System.Drawing.Point(12, 249);
+            this.GridTurnos.Name = "GridTurnos";
+            this.GridTurnos.ReadOnly = true;
+            this.GridTurnos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.GridTurnos.Size = new System.Drawing.Size(582, 182);
+            this.GridTurnos.TabIndex = 18;
+            this.GridTurnos.Text = "dataGridView1";
             // 
             // Grid
             // 
@@ -110,7 +112,7 @@ namespace CosultorioDescktop.Forms
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(600, 123);
+            this.label1.Location = new System.Drawing.Point(611, 123);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(48, 15);
             this.label1.TabIndex = 16;
@@ -118,27 +120,41 @@ namespace CosultorioDescktop.Forms
             // 
             // TxtBusqueda
             // 
-            this.TxtBusqueda.Location = new System.Drawing.Point(654, 120);
+            this.TxtBusqueda.Location = new System.Drawing.Point(665, 120);
             this.TxtBusqueda.Name = "TxtBusqueda";
             this.TxtBusqueda.Size = new System.Drawing.Size(234, 23);
             this.TxtBusqueda.TabIndex = 17;
+            // 
+            // chkVerEliminados
+            // 
+            this.chkVerEliminados.AutoSize = true;
+            this.chkVerEliminados.Location = new System.Drawing.Point(609, 178);
+            this.chkVerEliminados.Name = "chkVerEliminados";
+            this.chkVerEliminados.Size = new System.Drawing.Size(103, 19);
+            this.chkVerEliminados.TabIndex = 21;
+            this.chkVerEliminados.Text = "Ver Eliminados";
+            this.chkVerEliminados.UseVisualStyleBackColor = true;
+            this.chkVerEliminados.CheckedChanged += new System.EventHandler(this.chkVerEliminados_CheckedChanged);
             // 
             // FrmPacientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(911, 472);
+            this.Controls.Add(this.chkVerEliminados);
             this.Controls.Add(this.BtnAgregar);
-            this.Controls.Add(this.GridVacunas);
+            this.Controls.Add(this.GridTurnos);
             this.Controls.Add(this.Grid);
             this.Controls.Add(this.BtnNuevo);
             this.Controls.Add(this.BtnEditar);
             this.Controls.Add(this.BtnEliminar);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.TxtBusqueda);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmPacientes";
-            this.Text = "FrmPacientes";
-            ((System.ComponentModel.ISupportInitialize)(this.GridVacunas)).EndInit();
+            this.Text = "Formulario de Pacientes";
+            ((System.ComponentModel.ISupportInitialize)(this.GridTurnos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Grid)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -148,12 +164,13 @@ namespace CosultorioDescktop.Forms
         #endregion
 
         private System.Windows.Forms.Button BtnAgregar;
-        private System.Windows.Forms.DataGridView GridVacunas;
+        private System.Windows.Forms.DataGridView GridTurnos;
         private System.Windows.Forms.DataGridView Grid;
         private System.Windows.Forms.Button BtnNuevo;
         private System.Windows.Forms.Button BtnEditar;
         private System.Windows.Forms.Button BtnEliminar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox TxtBusqueda;
+        private System.Windows.Forms.CheckBox chkVerEliminados;
     }
 }

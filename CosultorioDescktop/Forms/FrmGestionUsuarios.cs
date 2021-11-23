@@ -1,4 +1,4 @@
-﻿using CosultorioDescktop.Models;
+﻿using ConsultorioDesktop.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -7,10 +7,10 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using System.Linq;
-using CosultorioDescktop.Forms;
-using CosultorioDescktop.ExtensionMethods;
+using ConsultorioDesktop.Forms;
+using ConsultorioDesktop.ExtensionMethods;
 
-namespace CosultorioDescktop.Forms
+namespace ConsultorioDesktop.Forms
 {
     public partial class FrmGestionUsuarios : Form
     {

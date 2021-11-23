@@ -1,6 +1,6 @@
-﻿using CosultorioDescktop.Core;
-using CosultorioDescktop.ExtensionMethods;
-using CosultorioDescktop.Models;
+﻿using ConsultorioDesktop.Core;
+using ConsultorioDesktop.ExtensionMethods;
+using ConsultorioDesktop.Models;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -10,7 +10,7 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
-namespace CosultorioDescktop.Forms
+namespace ConsultorioDesktop.Forms
 {
     public partial class FrmNuevoEditarUsuario : Form
     {

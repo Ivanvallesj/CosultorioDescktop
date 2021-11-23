@@ -1,5 +1,5 @@
 ﻿
-namespace CosultorioDescktop
+namespace ConsultorioDesktop
 {
     partial class FrmLogin
     {
@@ -29,6 +29,7 @@ namespace CosultorioDescktop
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmLogin));
             this.LblUsuario = new System.Windows.Forms.Label();
             this.LblPassword = new System.Windows.Forms.Label();
             this.TxtUsuario = new System.Windows.Forms.TextBox();
@@ -41,7 +42,7 @@ namespace CosultorioDescktop
             // 
             this.LblUsuario.AutoSize = true;
             this.LblUsuario.Font = new System.Drawing.Font("Goudy Old Style", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.LblUsuario.Location = new System.Drawing.Point(12, 53);
+            this.LblUsuario.Location = new System.Drawing.Point(12, 23);
             this.LblUsuario.Name = "LblUsuario";
             this.LblUsuario.Size = new System.Drawing.Size(82, 25);
             this.LblUsuario.TabIndex = 0;
@@ -51,7 +52,7 @@ namespace CosultorioDescktop
             // 
             this.LblPassword.AutoSize = true;
             this.LblPassword.Font = new System.Drawing.Font("Goudy Old Style", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.LblPassword.Location = new System.Drawing.Point(12, 105);
+            this.LblPassword.Location = new System.Drawing.Point(12, 75);
             this.LblPassword.Name = "LblPassword";
             this.LblPassword.Size = new System.Drawing.Size(110, 25);
             this.LblPassword.TabIndex = 1;
@@ -60,7 +61,7 @@ namespace CosultorioDescktop
             // TxtUsuario
             // 
             this.TxtUsuario.BackColor = System.Drawing.SystemColors.Menu;
-            this.TxtUsuario.Location = new System.Drawing.Point(127, 53);
+            this.TxtUsuario.Location = new System.Drawing.Point(127, 23);
             this.TxtUsuario.Name = "TxtUsuario";
             this.TxtUsuario.Size = new System.Drawing.Size(236, 23);
             this.TxtUsuario.TabIndex = 2;
@@ -68,7 +69,7 @@ namespace CosultorioDescktop
             // TxtPassword
             // 
             this.TxtPassword.BackColor = System.Drawing.SystemColors.Menu;
-            this.TxtPassword.Location = new System.Drawing.Point(128, 107);
+            this.TxtPassword.Location = new System.Drawing.Point(128, 77);
             this.TxtPassword.Name = "TxtPassword";
             this.TxtPassword.PasswordChar = '*';
             this.TxtPassword.Size = new System.Drawing.Size(236, 23);
@@ -77,7 +78,7 @@ namespace CosultorioDescktop
             // BtnIngresar
             // 
             this.BtnIngresar.Font = new System.Drawing.Font("Goudy Old Style", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.BtnIngresar.Location = new System.Drawing.Point(12, 165);
+            this.BtnIngresar.Location = new System.Drawing.Point(127, 136);
             this.BtnIngresar.Name = "BtnIngresar";
             this.BtnIngresar.Size = new System.Drawing.Size(95, 38);
             this.BtnIngresar.TabIndex = 4;
@@ -88,7 +89,7 @@ namespace CosultorioDescktop
             // BtnCancelar
             // 
             this.BtnCancelar.Font = new System.Drawing.Font("Goudy Old Style", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.BtnCancelar.Location = new System.Drawing.Point(127, 165);
+            this.BtnCancelar.Location = new System.Drawing.Point(268, 136);
             this.BtnCancelar.Name = "BtnCancelar";
             this.BtnCancelar.Size = new System.Drawing.Size(95, 38);
             this.BtnCancelar.TabIndex = 5;
@@ -101,13 +102,14 @@ namespace CosultorioDescktop
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.ClientSize = new System.Drawing.Size(410, 217);
+            this.ClientSize = new System.Drawing.Size(401, 188);
             this.Controls.Add(this.BtnCancelar);
             this.Controls.Add(this.BtnIngresar);
             this.Controls.Add(this.TxtPassword);
             this.Controls.Add(this.TxtUsuario);
             this.Controls.Add(this.LblPassword);
             this.Controls.Add(this.LblUsuario);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmLogin";

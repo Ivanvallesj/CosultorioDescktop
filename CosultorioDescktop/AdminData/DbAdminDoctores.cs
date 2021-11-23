@@ -1,13 +1,13 @@
-﻿using CosultorioDescktop.Forms;
-using CosultorioDescktop.Interfaces;
-using CosultorioDescktop.Models;
+﻿using ConsultorioDesktop.Forms;
+using ConsultorioDesktop.Interfaces;
+using ConsultorioDesktop.Models;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace CosultorioDescktop.AdminData
+namespace ConsultorioDesktop.AdminData
 {
     class DbAdminDoctores : IDbAdmin
     {

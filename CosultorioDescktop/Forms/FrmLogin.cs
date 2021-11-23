@@ -1,6 +1,6 @@
-﻿using CosultorioDescktop.Core;
-using CosultorioDescktop.Forms;
-using CosultorioDescktop.Models;
+﻿using ConsultorioDesktop.Core;
+using ConsultorioDesktop.Forms;
+using ConsultorioDesktop.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,7 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace CosultorioDescktop
+namespace ConsultorioDesktop
 {
     public partial class FrmLogin : Form
     {

@@ -1,5 +1,5 @@
 ﻿
-namespace CosultorioDescktop.Forms
+namespace ConsultorioDesktop.Forms
 {
     partial class FrmListadoPacientes
     {
@@ -37,7 +37,7 @@ namespace CosultorioDescktop.Forms
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Name = "FrmListadoPacientes";
-            this.Text = "FrmListadoPacientes";
+            this.Text = "Listado de Pacientes";
             this.Load += new System.EventHandler(this.FrmListadoPacientes_Load);
             this.ResumeLayout(false);
 

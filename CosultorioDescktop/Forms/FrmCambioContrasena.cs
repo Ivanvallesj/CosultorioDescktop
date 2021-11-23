@@ -6,10 +6,10 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
-using CosultorioDescktop.Core;
-using CosultorioDescktop.Models;
+using ConsultorioDesktop.Core;
+using ConsultorioDesktop.Models;
 
-namespace CosultorioDescktop.Forms
+namespace ConsultorioDesktop.Forms
 {
     public partial class FrmCambioContrasena : Form
     {

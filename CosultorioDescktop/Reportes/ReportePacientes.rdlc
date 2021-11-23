@@ -614,7 +614,7 @@ IIf(Fields!ObraSocial.Value =4,"Medife","LaSegunda"))))</Value>
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>DataSetPacientes</rd:DataSetName>
-        <rd:SchemaPath>C:\repos\CosultorioDescktop\CosultorioDescktop\DataSetPacientes.xsd</rd:SchemaPath>
+        <rd:SchemaPath>C:\repos\ConsultorioDesktop\ConsultorioDesktop\DataSetPacientes.xsd</rd:SchemaPath>
         <rd:TableName>Pacientes</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>

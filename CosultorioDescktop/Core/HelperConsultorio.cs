@@ -8,7 +8,7 @@ using System.Security.Cryptography;
 using System.Text;
 
 
-namespace CosultorioDescktop.Core
+namespace ConsultorioDesktop.Core
 {
     public class HelperConsultorio
     {
