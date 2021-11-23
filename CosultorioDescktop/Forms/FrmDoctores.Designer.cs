@@ -39,6 +39,7 @@ namespace CosultorioDescktop.Forms
             this.BtnEditar = new System.Windows.Forms.Button();
             this.BtnNuevo = new System.Windows.Forms.Button();
             this.GridDoctores = new System.Windows.Forms.DataGridView();
+            this.chkVerEliminados = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.GridPacientes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GridDoctores)).BeginInit();
             this.SuspendLayout();
@@ -71,6 +72,7 @@ namespace CosultorioDescktop.Forms
             this.BtnEliminarPaciente.TabIndex = 12;
             this.BtnEliminarPaciente.Text = "E&liminar Paciente";
             this.BtnEliminarPaciente.UseVisualStyleBackColor = true;
+            this.BtnEliminarPaciente.Click += new System.EventHandler(this.BtnEliminarPaciente_Click);
             // 
             // GridPacientes
             // 
@@ -91,6 +93,7 @@ namespace CosultorioDescktop.Forms
             this.TxtBusqueda.Name = "TxtBusqueda";
             this.TxtBusqueda.Size = new System.Drawing.Size(249, 23);
             this.TxtBusqueda.TabIndex = 15;
+            this.TxtBusqueda.TextChanged += new System.EventHandler(this.TxtBusqueda_TextChanged);
             // 
             // LblBuscar
             // 
@@ -143,12 +146,25 @@ namespace CosultorioDescktop.Forms
             this.GridDoctores.Size = new System.Drawing.Size(640, 177);
             this.GridDoctores.TabIndex = 7;
             this.GridDoctores.Text = "dataGridView1";
+            this.GridDoctores.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridDoctores_CellEnter);
+            // 
+            // chkVerEliminados
+            // 
+            this.chkVerEliminados.AutoSize = true;
+            this.chkVerEliminados.Location = new System.Drawing.Point(670, 170);
+            this.chkVerEliminados.Name = "chkVerEliminados";
+            this.chkVerEliminados.Size = new System.Drawing.Size(103, 19);
+            this.chkVerEliminados.TabIndex = 16;
+            this.chkVerEliminados.Text = "Ver Eliminados";
+            this.chkVerEliminados.UseVisualStyleBackColor = true;
+            this.chkVerEliminados.CheckedChanged += new System.EventHandler(this.chkVerEliminados_CheckedChanged);
             // 
             // FrmDoctores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(962, 499);
+            this.Controls.Add(this.chkVerEliminados);
             this.Controls.Add(this.BtnAgregarPaciente);
             this.Controls.Add(this.BtnEditarPaciente);
             this.Controls.Add(this.BtnEliminarPaciente);
@@ -180,5 +196,6 @@ namespace CosultorioDescktop.Forms
         private System.Windows.Forms.Button BtnEditar;
         private System.Windows.Forms.Button BtnNuevo;
         private System.Windows.Forms.DataGridView GridDoctores;
+        private System.Windows.Forms.CheckBox chkVerEliminados;
     }
 }

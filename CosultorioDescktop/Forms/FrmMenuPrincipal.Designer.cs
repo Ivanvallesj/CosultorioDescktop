@@ -35,13 +35,14 @@ namespace CosultorioDescktop.Forms
             this.administradoresDoctoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pacientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.administradoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pacientesToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.turnosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.doctoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.usuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.BtnTurnos = new System.Windows.Forms.ToolStripButton();
+            this.configuracionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.parametrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -53,6 +54,7 @@ namespace CosultorioDescktop.Forms
             this.cargaDeAdministradoresToolStripMenuItem,
             this.listadoToolStripMenuItem,
             this.usuariosToolStripMenuItem,
+            this.configuracionToolStripMenuItem,
             this.salirToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -86,36 +88,32 @@ namespace CosultorioDescktop.Forms
             // listadoToolStripMenuItem
             // 
             this.listadoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.administradoresToolStripMenuItem,
             this.pacientesToolStripMenuItem1,
-            this.turnosToolStripMenuItem1});
+            this.doctoresToolStripMenuItem});
             this.listadoToolStripMenuItem.Name = "listadoToolStripMenuItem";
             this.listadoToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
             this.listadoToolStripMenuItem.Text = "Listado";
             // 
-            // administradoresToolStripMenuItem
-            // 
-            this.administradoresToolStripMenuItem.Name = "administradoresToolStripMenuItem";
-            this.administradoresToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
-            this.administradoresToolStripMenuItem.Text = "Administradores";
-            // 
             // pacientesToolStripMenuItem1
             // 
             this.pacientesToolStripMenuItem1.Name = "pacientesToolStripMenuItem1";
-            this.pacientesToolStripMenuItem1.Size = new System.Drawing.Size(161, 22);
+            this.pacientesToolStripMenuItem1.Size = new System.Drawing.Size(124, 22);
             this.pacientesToolStripMenuItem1.Text = "Pacientes";
+            this.pacientesToolStripMenuItem1.Click += new System.EventHandler(this.pacientesToolStripMenuItem1_Click);
             // 
-            // turnosToolStripMenuItem1
+            // doctoresToolStripMenuItem
             // 
-            this.turnosToolStripMenuItem1.Name = "turnosToolStripMenuItem1";
-            this.turnosToolStripMenuItem1.Size = new System.Drawing.Size(161, 22);
-            this.turnosToolStripMenuItem1.Text = "Turnos ";
+            this.doctoresToolStripMenuItem.Name = "doctoresToolStripMenuItem";
+            this.doctoresToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.doctoresToolStripMenuItem.Text = "Doctores";
+            this.doctoresToolStripMenuItem.Click += new System.EventHandler(this.doctoresToolStripMenuItem_Click);
             // 
             // usuariosToolStripMenuItem
             // 
             this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
             this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(64, 20);
             this.usuariosToolStripMenuItem.Text = "Usuarios";
+            this.usuariosToolStripMenuItem.Click += new System.EventHandler(this.usuariosToolStripMenuItem_Click);
             // 
             // salirToolStripMenuItem
             // 
@@ -144,6 +142,22 @@ namespace CosultorioDescktop.Forms
             this.BtnTurnos.Text = "Turnos";
             this.BtnTurnos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.BtnTurnos.ToolTipText = "Gestion de turnos";
+            this.BtnTurnos.Click += new System.EventHandler(this.BtnTurnos_Click);
+            // 
+            // configuracionToolStripMenuItem
+            // 
+            this.configuracionToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.parametrosToolStripMenuItem});
+            this.configuracionToolStripMenuItem.Name = "configuracionToolStripMenuItem";
+            this.configuracionToolStripMenuItem.Size = new System.Drawing.Size(95, 20);
+            this.configuracionToolStripMenuItem.Text = "Configuracion";
+            // 
+            // parametrosToolStripMenuItem
+            // 
+            this.parametrosToolStripMenuItem.Name = "parametrosToolStripMenuItem";
+            this.parametrosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.parametrosToolStripMenuItem.Text = "Parametros";
+            this.parametrosToolStripMenuItem.Click += new System.EventHandler(this.parametrosToolStripMenuItem_Click);
             // 
             // FrmMenuPrincipal
             // 
@@ -176,12 +190,13 @@ namespace CosultorioDescktop.Forms
         private System.Windows.Forms.ToolStripMenuItem administradoresDoctoresToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pacientesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem listadoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem administradoresToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pacientesToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem turnosToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton BtnTurnos;
         private System.Windows.Forms.ToolStripMenuItem usuariosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem doctoresToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem configuracionToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem parametrosToolStripMenuItem;
     }
 }

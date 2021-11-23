@@ -1,5 +1,5 @@
 ﻿
-namespace CosultorioDescktop.Presentation
+namespace CosultorioDescktop.Forms
 {
     partial class FrmBase
     {
@@ -47,6 +47,7 @@ namespace CosultorioDescktop.Presentation
             this.chkVerEliminados.TabIndex = 16;
             this.chkVerEliminados.Text = "Ver Eliminados";
             this.chkVerEliminados.UseVisualStyleBackColor = true;
+            this.chkVerEliminados.CheckedChanged += new System.EventHandler(this.chkVerEliminados_CheckedChanged);
             // 
             // BtnEliminar
             // 
@@ -56,6 +57,7 @@ namespace CosultorioDescktop.Presentation
             this.BtnEliminar.TabIndex = 15;
             this.BtnEliminar.Text = "Eliminar";
             this.BtnEliminar.UseVisualStyleBackColor = true;
+            this.BtnEliminar.Click += new System.EventHandler(this.BtnEliminar_Click);
             // 
             // BtnEditar
             // 
@@ -65,6 +67,7 @@ namespace CosultorioDescktop.Presentation
             this.BtnEditar.TabIndex = 14;
             this.BtnEditar.Text = "Editar";
             this.BtnEditar.UseVisualStyleBackColor = true;
+            this.BtnEditar.Click += new System.EventHandler(this.BtnEditar_Click);
             // 
             // BtnNuevo
             // 
@@ -74,6 +77,7 @@ namespace CosultorioDescktop.Presentation
             this.BtnNuevo.TabIndex = 13;
             this.BtnNuevo.Text = "&Nuevo";
             this.BtnNuevo.UseVisualStyleBackColor = true;
+            this.BtnNuevo.Click += new System.EventHandler(this.BtnNuevo_Click);
             // 
             // TxtBusqueda
             // 
@@ -81,6 +85,7 @@ namespace CosultorioDescktop.Presentation
             this.TxtBusqueda.Name = "TxtBusqueda";
             this.TxtBusqueda.Size = new System.Drawing.Size(252, 23);
             this.TxtBusqueda.TabIndex = 12;
+            this.TxtBusqueda.TextChanged += new System.EventHandler(this.TxtBusqueda_TextChanged_1);
             // 
             // grid
             // 
@@ -99,7 +104,7 @@ namespace CosultorioDescktop.Presentation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(793, 348);
             this.Controls.Add(this.chkVerEliminados);
             this.Controls.Add(this.BtnEliminar);
             this.Controls.Add(this.BtnEditar);

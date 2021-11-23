@@ -9,34 +9,58 @@ using System.Windows.Forms;
 using System.Linq;
 using CosultorioDescktop.AdminData;
 using CosultorioDescktop.ExtensionMethods;
+using Microsoft.EntityFrameworkCore;
+using CosultorioDescktop.Interfaces;
 
 namespace CosultorioDescktop.Forms
 {
-    public partial class FrmDoctores : Form
+    public partial class FrmDoctores : Form, IFormBase
     {
-        DbAdminDoctores dbAdminDoctores = new DbAdminDoctores();
-        Doctor doctor { get; set; }
-        public FrmDoctores()
+        IDbAdmin dbAdmin;
+        Doctor doctor = new Doctor();
+        public int? IdEditar { get ; set ; }
+
+        public FrmDoctores(IDbAdmin objetoDbAdmin)
         {
+            dbAdmin = objetoDbAdmin;
             InitializeComponent();
             ActualizarGrilla();
         }
+
+        private void ActualizarGrillaPacientes()
+        {
+            if (GridDoctores.CurrentRow != null)
+            {
+                var idDoctorSeleccionado = GridDoctores.ObtenerIdSeleccionado();
+                if (idDoctorSeleccionado > 0)
+                {
+                    using var db = new ConsultorioContext();
+                    doctor = (Doctor)db.Doctores.Where(t => t.Id == idDoctorSeleccionado).Include(p => p.Pacientes).FirstOrDefault();
+                    var pacientesAListar = from paciente in doctor.Pacientes
+                                           select new
+                                           {
+                                               id = paciente.Id,
+                                               nombre = paciente.Nombre + " " + paciente.Apellido,
+                                               FechaNacimiento = paciente.FechaNacimiento,
+                                               Sexo = paciente.Sexo
+                                           };
+
+                    GridPacientes.DataSource = pacientesAListar.ToList();
+                }
+            }
+        }
+
         private void ActualizarGrilla()
         {
-
-            using (var db = new ConsultorioContext())
+            if (chkVerEliminados.Checked)
             {
-                //creamos una coleccion para seleccionar los datos que queremos mostrar en la grilla 
-                var dotoresAListar = from doctores in db.Doctores
-                                       select new
-                                       {
-                                           id = doctores.Id,
-                                           nombre = doctores.Nombre + " " + doctores.Apellido,
-                                           FechaNacimiento = doctores.FechaNacimiento,
-                                           Sexo = doctores.Sexo
-                                       };
-                GridDoctores.DataSource = dotoresAListar.ToList();
-
+                GridDoctores.DataSource = dbAdmin.ObtenerEliminados();
+                GridDoctores.OcultarColumnas(ocultarMostrar: false);
+            }
+            else
+            {
+                GridDoctores.DataSource = dbAdmin.ObtenerTodos();
+                GridDoctores.OcultarColumnas();
             }
         }
 
@@ -75,20 +99,28 @@ namespace CosultorioDescktop.Forms
 
             // preguntar si realmente desea eliminar al tutor [nombre_doctor_seleccionado]
             //colocamos el signo $ para crear la interpolacion de cadenas
-            DialogResult respuesta = MessageBox.Show($"¿Estas seguro que desea eliminar a {nombreDoctorSeleccionado}?", "Eliminar Docotr", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult respuesta = MessageBox.Show($"¿Estas seguro que desea {BtnEliminar.Text} a {nombreDoctorSeleccionado}?", BtnEliminar.Text, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
             //si responde que si, instanciamos al objeto dbContext y eliminamos el tutor a traves del id que obtuvimos.
-            if (respuesta == DialogResult.Yes)
+            if (respuesta == DialogResult.Yes && BtnEliminar.Text == "Eliminar")
             {
-                dbAdminDoctores.Eliminar(idDoctorSeleccionado);
+                dbAdmin.Eliminar(idDoctorSeleccionado);
                 ActualizarGrilla();
             }
+            if (respuesta == DialogResult.Yes && BtnEliminar.Text == "Restaurar")
+            {
+                dbAdmin.Restaurar(idDoctorSeleccionado);
+                ActualizarGrilla();
+            }
+
         }
 
         private void BtnAgregarPaciente_Click(object sender, EventArgs e)
         {
-            var frmNuevoEditarPaciente = new FrmNuevoEditarPaciente();
+            var frmNuevoEditarPaciente = new FrmNuevoEditarPaciente(doctor);
             frmNuevoEditarPaciente.ShowDialog();
+            ActualizarGrillaPacientes();
+            GridPacientes.CurrentCell = GridPacientes.Rows[GridPacientes.RowCount - 1].Cells[0];
         }
 
         private void BtnEditarPaciente_Click(object sender, EventArgs e)
@@ -98,7 +130,7 @@ namespace CosultorioDescktop.Forms
             var filaAEditar = GridPacientes.CurrentRow.Index;
 
             //abrimos el formulario para la edicion de un  tutor
-            var FrmNuevoEditarPaciente = new FrmNuevoEditarPaciente(idPacienteSeleccionado);
+            var FrmNuevoEditarPaciente = new FrmNuevoEditarPaciente(doctor, idPacienteSeleccionado);
             FrmNuevoEditarPaciente.ShowDialog();
 
             //actualizamos la grilla
@@ -106,6 +138,58 @@ namespace CosultorioDescktop.Forms
 
             //seleccionamos el registro editado
             GridPacientes.CurrentCell = GridPacientes.Rows[filaAEditar].Cells[0];
+        }
+
+        private void GridDoctores_CellEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            ActualizarGrillaPacientes();
+        }
+
+        void IFormBase.CargarDatosEnPantalla()
+        {
+            throw new NotImplementedException();
+        }
+
+        void IFormBase.LimpiarDatosDeLaPantalla()
+        {
+            throw new NotImplementedException();
+        }
+
+        private void chkVerEliminados_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkVerEliminados.Checked)
+                BtnEliminar.Text = "Restaurar";
+            else
+                BtnEliminar.Text = "Eliminar";
+            ActualizarGrilla();
+        }
+
+        private void BtnEliminarPaciente_Click(object sender, EventArgs e)
+        {
+            //obtenemos el id y nombre de la vacuna seleccionada en la grilla detalle
+            var idSeleccionado = GridPacientes.ObtenerIdSeleccionado();
+            var nombreSeleccionado = GridPacientes.CurrentRow.Cells[1].Value.ToString();
+            var nombreDoctor = GridDoctores.CurrentRow.Cells[1].Value.ToString();
+            var idDoctor = GridDoctores.ObtenerIdSeleccionado();
+            //preguntar si realmente desea eliminar a la vacuna seleccionada
+            DialogResult respuesta = MessageBox.Show($"¿Está seguro que desea quitar el paciente {nombreSeleccionado} de su doctor {nombreDoctor}?", "Quitar vacuna ", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            //si responde que si, instanciamos al objeto dbcontext, y eliminamos el Calendario a través del id que obtuvimos
+            if (respuesta == DialogResult.Yes)
+            {
+                using (var db = new ConsultorioContext())
+                {
+                    var detalle = db.Pacientes.Find(idSeleccionado);
+                    db.Pacientes.Remove(detalle);
+                    db.SaveChanges();
+                }
+                ActualizarGrillaPacientes();
+            }
+
+        }
+
+        private void TxtBusqueda_TextChanged(object sender, EventArgs e)
+        {
+            GridDoctores.DataSource = dbAdmin.ObtenerTodos(TxtBusqueda.Text);
         }
     }
 }

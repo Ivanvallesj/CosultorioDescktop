@@ -70,6 +70,7 @@ namespace CosultorioDescktop
             this.TxtPassword.BackColor = System.Drawing.SystemColors.Menu;
             this.TxtPassword.Location = new System.Drawing.Point(128, 107);
             this.TxtPassword.Name = "TxtPassword";
+            this.TxtPassword.PasswordChar = '*';
             this.TxtPassword.Size = new System.Drawing.Size(236, 23);
             this.TxtPassword.TabIndex = 3;
             // 

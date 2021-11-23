@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using CosultorioDescktop.Core;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -9,7 +10,8 @@ namespace CosultorioDescktop.Models
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Server=.\SQLEXPRESS; Database = ConsultorioContext; User Id = sa; Password = 123; MultipleActiveResultSets = True; ");
+            //optionsBuilder.UseSqlServer(@"Server=.\SQLEXPRESS; Database = ConsultorioContext; User Id = sa; Password = 123; MultipleActiveResultSets = True; ");
+            optionsBuilder.UseSqlServer(HelperConsultorio.ObtenerCadenaDeConexion());
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

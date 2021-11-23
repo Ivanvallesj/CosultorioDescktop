@@ -49,6 +49,7 @@ namespace CosultorioDescktop.Forms
             this.btnCancelar.TabIndex = 15;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnGuardar
             // 
@@ -58,6 +59,7 @@ namespace CosultorioDescktop.Forms
             this.btnGuardar.TabIndex = 14;
             this.btnGuardar.Text = "Guardar Usuario";
             this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click_1);
             // 
             // cboTipoUsuario
             // 

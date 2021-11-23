@@ -46,6 +46,7 @@ namespace CosultorioDescktop.Forms
             this.btnCambiarContraseña.TabIndex = 10;
             this.btnCambiarContraseña.Text = "CambiarContraseña";
             this.btnCambiarContraseña.UseVisualStyleBackColor = true;
+            this.btnCambiarContraseña.Click += new System.EventHandler(this.btnCambiarContraseña_Click_1);
             // 
             // btnSalir
             // 
@@ -55,6 +56,7 @@ namespace CosultorioDescktop.Forms
             this.btnSalir.TabIndex = 9;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click_1);
             // 
             // BtnEliminarUsuario
             // 
@@ -64,6 +66,7 @@ namespace CosultorioDescktop.Forms
             this.BtnEliminarUsuario.TabIndex = 8;
             this.BtnEliminarUsuario.Text = "Eliminar";
             this.BtnEliminarUsuario.UseVisualStyleBackColor = true;
+            this.BtnEliminarUsuario.Click += new System.EventHandler(this.BtnEliminarUsuario_Click_1);
             // 
             // BtnEditarUsuario
             // 
@@ -73,6 +76,7 @@ namespace CosultorioDescktop.Forms
             this.BtnEditarUsuario.TabIndex = 7;
             this.BtnEditarUsuario.Text = "Editar";
             this.BtnEditarUsuario.UseVisualStyleBackColor = true;
+            this.BtnEditarUsuario.Click += new System.EventHandler(this.BtnEditarUsuario_Click_1);
             // 
             // BtnAñadirUsuario
             // 
@@ -82,6 +86,7 @@ namespace CosultorioDescktop.Forms
             this.BtnAñadirUsuario.TabIndex = 5;
             this.BtnAñadirUsuario.Text = "Añadir";
             this.BtnAñadirUsuario.UseVisualStyleBackColor = true;
+            this.BtnAñadirUsuario.Click += new System.EventHandler(this.BtnAñadirUsuario_Click_1);
             // 
             // dataGridUsuarios
             // 
@@ -107,7 +112,7 @@ namespace CosultorioDescktop.Forms
             this.Controls.Add(this.BtnAñadirUsuario);
             this.Controls.Add(this.dataGridUsuarios);
             this.Name = "FrmGestionUsuarios";
-            this.Text = "FrmGestionUsuarios";
+            this.Text = "Furmulario de Usuarios";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridUsuarios)).EndInit();
             this.ResumeLayout(false);
 

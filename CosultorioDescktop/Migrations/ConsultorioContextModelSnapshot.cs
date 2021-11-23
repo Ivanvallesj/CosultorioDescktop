@@ -109,8 +109,14 @@ namespace CosultorioDescktop.Migrations
                     b.Property<int>("DoctorId")
                         .HasColumnType("int");
 
+                    b.Property<bool>("Eliminado")
+                        .HasColumnType("bit");
+
                     b.Property<string>("Email")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("FechaHoraEliminacion")
+                        .HasColumnType("datetime2");
 
                     b.Property<DateTime>("FechaNacimiento")
                         .HasColumnType("datetime2");
@@ -132,9 +138,14 @@ namespace CosultorioDescktop.Migrations
                     b.Property<double>("Telefono")
                         .HasColumnType("float");
 
+                    b.Property<int?>("UsuarioId")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
 
                     b.HasIndex("DoctorId");
+
+                    b.HasIndex("UsuarioId");
 
                     b.ToTable("Pacientes");
 
@@ -146,6 +157,7 @@ namespace CosultorioDescktop.Migrations
                             Direccion = "Juan Peron Y urquiza",
                             Dni = 36196259.0,
                             DoctorId = 1,
+                            Eliminado = false,
                             Email = "inmobiliariajuliandaniel@gmail.com",
                             FechaNacimiento = new DateTime(1992, 1, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Localidad = "San Justo",
@@ -169,6 +181,12 @@ namespace CosultorioDescktop.Migrations
                     b.Property<int>("DoctorId")
                         .HasColumnType("int");
 
+                    b.Property<bool>("Eliminado")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime?>("FechaHoraEliminacion")
+                        .HasColumnType("datetime2");
+
                     b.Property<DateTime>("FechaTurno")
                         .HasColumnType("datetime2");
 
@@ -184,11 +202,16 @@ namespace CosultorioDescktop.Migrations
                     b.Property<int>("TipoTurno")
                         .HasColumnType("int");
 
+                    b.Property<int?>("UsuarioId")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
 
                     b.HasIndex("DoctorId");
 
                     b.HasIndex("PacienteId");
+
+                    b.HasIndex("UsuarioId");
 
                     b.ToTable("TurnoDetalles");
 
@@ -198,8 +221,9 @@ namespace CosultorioDescktop.Migrations
                             Id = 1,
                             Bonos = 2,
                             DoctorId = 1,
+                            Eliminado = false,
                             FechaTurno = new DateTime(2023, 12, 2, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Hora = new DateTime(2021, 11, 15, 14, 18, 34, 112, DateTimeKind.Local).AddTicks(1519),
+                            Hora = new DateTime(2021, 11, 17, 14, 37, 38, 84, DateTimeKind.Local).AddTicks(2111),
                             PacienteId = 1,
                             Precio = 300,
                             TipoTurno = 1
@@ -270,6 +294,10 @@ namespace CosultorioDescktop.Migrations
                         .HasForeignKey("DoctorId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.HasOne("CosultorioDescktop.Models.Usuario", "Usuario")
+                        .WithMany()
+                        .HasForeignKey("UsuarioId");
                 });
 
             modelBuilder.Entity("CosultorioDescktop.Models.TurnoDetalles", b =>
@@ -285,6 +313,10 @@ namespace CosultorioDescktop.Migrations
                         .HasForeignKey("PacienteId")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
+
+                    b.HasOne("CosultorioDescktop.Models.Usuario", "Usuario")
+                        .WithMany()
+                        .HasForeignKey("UsuarioId");
                 });
 
             modelBuilder.Entity("CosultorioDescktop.Models.Usuario", b =>

@@ -75,6 +75,7 @@ namespace CosultorioDescktop.Forms
             this.Grid.Size = new System.Drawing.Size(582, 182);
             this.Grid.TabIndex = 12;
             this.Grid.Text = "dataGridView1";
+            this.Grid.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.Grid_CellEnter);
             // 
             // BtnNuevo
             // 
@@ -84,6 +85,7 @@ namespace CosultorioDescktop.Forms
             this.BtnNuevo.TabIndex = 13;
             this.BtnNuevo.Text = "&Nuevo";
             this.BtnNuevo.UseVisualStyleBackColor = true;
+            this.BtnNuevo.Click += new System.EventHandler(this.BtnNuevo_Click);
             // 
             // BtnEditar
             // 
@@ -93,6 +95,7 @@ namespace CosultorioDescktop.Forms
             this.BtnEditar.TabIndex = 14;
             this.BtnEditar.Text = "Editar";
             this.BtnEditar.UseVisualStyleBackColor = true;
+            this.BtnEditar.Click += new System.EventHandler(this.BtnEditar_Click);
             // 
             // BtnEliminar
             // 
@@ -102,6 +105,7 @@ namespace CosultorioDescktop.Forms
             this.BtnEliminar.TabIndex = 15;
             this.BtnEliminar.Text = "Eliminar";
             this.BtnEliminar.UseVisualStyleBackColor = true;
+            this.BtnEliminar.Click += new System.EventHandler(this.BtnEliminar_Click);
             // 
             // label1
             // 

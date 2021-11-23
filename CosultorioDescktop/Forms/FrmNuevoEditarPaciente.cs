@@ -93,7 +93,7 @@ namespace CosultorioDescktop.Forms
                 TxtDireccion.Text = paciente.Direccion;
                 CboSexo.SelectedItem = paciente.Sexo;
                 CboDoctor.SelectedValue = paciente.DoctorId;
-                CboObraSocial.SelectedValue = paciente.ObraSocial;
+                CboObraSocial.SelectedItem = paciente.ObraSocial;
                 NUpDownDni.Value = (decimal)paciente.Dni;
                 DtpFechaNacimiento.Value = paciente.FechaNacimiento;
                 TxtEmail.Text = paciente.Email;

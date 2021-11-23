@@ -1,4 +1,5 @@
 ﻿using CosultorioDescktop.Core;
+using CosultorioDescktop.ExtensionMethods;
 using CosultorioDescktop.Models;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -48,8 +49,7 @@ namespace CosultorioDescktop.Forms
         {
             cboTipoUsuario.DataSource = Enum.GetValues(typeof(TipoUsuarioEnum));
         }
-
-        private void btnGuardar_Click(object sender, EventArgs e)
+        private void btnGuardar_Click_1(object sender, EventArgs e)
         {
             //instanciamos un objeto DbContext
             using (var db = new ConsultorioContext())
@@ -73,12 +73,11 @@ namespace CosultorioDescktop.Forms
                 db.SaveChanges();
                 this.Close();
             }
-
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.MensajeDeAdvertenciaDeSalida();
         }
     }
 }

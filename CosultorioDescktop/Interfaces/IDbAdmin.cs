@@ -13,6 +13,7 @@ namespace CosultorioDescktop.Interfaces
         object Obtener(int? idObtener);
         void Agregar(object Modelo);
         void Actualizar(object Modelo);
+        void Restaurar(int idSeleccionado);
 
 
     }

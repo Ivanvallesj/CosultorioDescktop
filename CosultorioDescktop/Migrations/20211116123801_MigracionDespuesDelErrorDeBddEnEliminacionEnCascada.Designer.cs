@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CosultorioDescktop.Migrations
 {
     [DbContext(typeof(ConsultorioContext))]
-    [Migration("20211114220157_migracion2")]
-    partial class migracion2
+    [Migration("20211116123801_MigracionDespuesDelErrorDeBddEnEliminacionEnCascada")]
+    partial class MigracionDespuesDelErrorDeBddEnEliminacionEnCascada
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -72,6 +72,22 @@ namespace CosultorioDescktop.Migrations
                     b.HasIndex("UsuarioId");
 
                     b.ToTable("Doctores");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Apellido = "Valle",
+                            Dni = 37454714,
+                            Eliminado = false,
+                            Email = "ivanvallesj@gmail.com",
+                            Especializacion = 1,
+                            FechaNacimiento = new DateTime(1993, 6, 29, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Localidad = "San Justo",
+                            Nombre = "Ivan",
+                            Sexo = 1,
+                            Telefono = 3498459297.0
+                        });
                 });
 
             modelBuilder.Entity("CosultorioDescktop.Models.Paciente", b =>
@@ -123,6 +139,23 @@ namespace CosultorioDescktop.Migrations
                     b.HasIndex("DoctorId");
 
                     b.ToTable("Pacientes");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Apellido = "Parra",
+                            Direccion = "Juan Peron Y urquiza",
+                            Dni = 36196259.0,
+                            DoctorId = 1,
+                            Email = "inmobiliariajuliandaniel@gmail.com",
+                            FechaNacimiento = new DateTime(1992, 1, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Localidad = "San Justo",
+                            Nombre = "Julian",
+                            ObraSocial = 4,
+                            Sexo = 1,
+                            Telefono = 3498526969.0
+                        });
                 });
 
             modelBuilder.Entity("CosultorioDescktop.Models.TurnoDetalles", b =>
@@ -160,6 +193,19 @@ namespace CosultorioDescktop.Migrations
                     b.HasIndex("PacienteId");
 
                     b.ToTable("TurnoDetalles");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Bonos = 2,
+                            DoctorId = 1,
+                            FechaTurno = new DateTime(2023, 12, 2, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Hora = new DateTime(2021, 11, 16, 9, 38, 0, 16, DateTimeKind.Local).AddTicks(6677),
+                            PacienteId = 1,
+                            Precio = 300,
+                            TipoTurno = 1
+                        });
                 });
 
             modelBuilder.Entity("CosultorioDescktop.Models.Usuario", b =>
@@ -199,6 +245,17 @@ namespace CosultorioDescktop.Migrations
                     b.HasIndex("UsuarioId1");
 
                     b.ToTable("Usuarios");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Eliminado = false,
+                            Nombre = "Ivan Valle",
+                            Password = "a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3",
+                            TipoUsuario = 1,
+                            User = "Ivan"
+                        });
                 });
 
             modelBuilder.Entity("CosultorioDescktop.Models.Doctor", b =>
@@ -222,13 +279,13 @@ namespace CosultorioDescktop.Migrations
                     b.HasOne("CosultorioDescktop.Models.Doctor", "Doctor")
                         .WithMany()
                         .HasForeignKey("DoctorId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.HasOne("CosultorioDescktop.Models.Paciente", "Paciente")
                         .WithMany()
                         .HasForeignKey("PacienteId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
                 });
 

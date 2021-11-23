@@ -5,7 +5,7 @@ using System.Text;
 
 namespace CosultorioDescktop.Models
 {
-    public class Paciente
+    public class Paciente : ModeloBase
     {
         public int Id { get; set; }
         [Required]

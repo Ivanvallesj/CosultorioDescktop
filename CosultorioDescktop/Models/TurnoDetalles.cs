@@ -5,7 +5,7 @@ using System.Text;
 
 namespace CosultorioDescktop.Models
 {
-    public class TurnoDetalles
+    public class TurnoDetalles : ModeloBase
     {
         public int Id { get; set; }
         [Required]

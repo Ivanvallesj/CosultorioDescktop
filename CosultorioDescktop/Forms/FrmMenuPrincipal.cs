@@ -1,4 +1,5 @@
-﻿using CosultorioDescktop.Models;
+﻿using CosultorioDescktop.AdminData;
+using CosultorioDescktop.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,7 +19,7 @@ namespace CosultorioDescktop.Forms
         }
         private void administradoresDoctoresToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var frmDoctores = new FrmDoctores();
+            var frmDoctores = new FrmDoctores(new DbAdminDoctores());
             frmDoctores.ShowDialog();
 
         }
@@ -47,6 +48,36 @@ namespace CosultorioDescktop.Forms
         {
             var frmPacientes = new FrmPacientes();
             frmPacientes.ShowDialog();
+        }
+
+        private void usuariosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var frmGestionUsuarios = new FrmGestionUsuarios();
+            frmGestionUsuarios.ShowDialog();
+        }
+
+        private void BtnTurnos_Click(object sender, EventArgs e)
+        {
+            var frmTurnos = new FrmBase(new DbAdminTurnos(),new FrmNuevoEditarTurno());
+            frmTurnos.ShowDialog();
+        }
+
+        private void doctoresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var frmListadoDoctores = new FrmListadoDoctores();
+            frmListadoDoctores.ShowDialog();
+        }
+
+        private void pacientesToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            var frmListadoPacientes = new FrmListadoPacientes();
+            frmListadoPacientes.ShowDialog();
+        }
+
+        private void parametrosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var frmParametros = new FrmParametros(this);
+            frmParametros.ShowDialog();
         }
     }
 }

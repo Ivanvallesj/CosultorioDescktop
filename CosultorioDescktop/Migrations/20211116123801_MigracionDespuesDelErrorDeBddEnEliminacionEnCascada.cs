@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace CosultorioDescktop.Migrations
 {
-    public partial class migracion : Migration
+    public partial class MigracionDespuesDelErrorDeBddEnEliminacionEnCascada : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -114,13 +114,13 @@ namespace CosultorioDescktop.Migrations
                         column: x => x.DoctorId,
                         principalTable: "Doctores",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
                         name: "FK_TurnoDetalles_Pacientes_PacienteId",
                         column: x => x.PacienteId,
                         principalTable: "Pacientes",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.InsertData(
@@ -141,7 +141,7 @@ namespace CosultorioDescktop.Migrations
             migrationBuilder.InsertData(
                 table: "TurnoDetalles",
                 columns: new[] { "Id", "Bonos", "DoctorId", "FechaTurno", "Hora", "PacienteId", "Precio", "TipoTurno" },
-                values: new object[] { 1, 2, 1, new DateTime(2023, 12, 2, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(2021, 11, 14, 18, 48, 31, 153, DateTimeKind.Local).AddTicks(4210), 1, 300, 1 });
+                values: new object[] { 1, 2, 1, new DateTime(2023, 12, 2, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(2021, 11, 16, 9, 38, 0, 16, DateTimeKind.Local).AddTicks(6677), 1, 300, 1 });
 
             migrationBuilder.CreateIndex(
                 name: "IX_Doctores_UsuarioId",
