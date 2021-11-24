@@ -37,8 +37,25 @@ namespace ConsultorioDesktop.Forms
             }
             else
             {
-                Grid.DataSource = dbAdmin.ObtenerTodos();
-                Grid.OcultarColumnas();
+                using (var db = new ConsultorioContext())
+                {
+                    //creamos una coleccion para seleccionar los datos que queremos mostrar en la grilla 
+                    var pacientesAListar = from paciente in db.Pacientes
+                                           select new
+                                           {
+                                               id = paciente.Id,
+                                               nombre = paciente.Nombre + " " + paciente.Apellido,
+                                               FechaNacimiento = paciente.FechaNacimiento,
+                                               Sexo = paciente.Sexo,
+                                               Doctor = paciente.Doctor.Apellido + " " + paciente.Doctor.Nombre,
+                                               Eliminado = paciente.Eliminado
+                                           };
+                    Grid.DataSource = pacientesAListar.IgnoreQueryFilters().Where(c=> c.Eliminado == false).ToList();
+                    Grid.OcultarColumnas();
+
+
+
+                }
             }
         }
         private void BtnNuevo_Click(object sender, EventArgs e)

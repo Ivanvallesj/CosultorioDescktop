@@ -74,5 +74,7 @@ namespace ConsultorioDesktop.AdminData
                 db.Entry(doctores).State = EntityState.Modified;
                 db.SaveChanges();
             }
+
+       
     }
 }

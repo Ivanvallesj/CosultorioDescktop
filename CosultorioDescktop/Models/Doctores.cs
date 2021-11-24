@@ -26,6 +26,7 @@ namespace ConsultorioDesktop.Models
         [Required]
         public EspecializacionEnum Especializacion { get; set; }
         public ICollection<Paciente> Pacientes { get; set; }
-        //public ICollection<TurnoDetalles> TurnoDetalles { get; set; }
+        
+
     }
 }

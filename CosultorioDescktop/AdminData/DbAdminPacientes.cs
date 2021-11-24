@@ -73,5 +73,7 @@ namespace ConsultorioDesktop.AdminData
             db.Entry(pacientes).State = EntityState.Modified;
             db.SaveChanges();
         }
+
+     
     }
 }
