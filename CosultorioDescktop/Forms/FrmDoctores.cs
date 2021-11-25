@@ -17,6 +17,7 @@ namespace ConsultorioDesktop.Forms
     public partial class FrmDoctores : Form, IFormBase
     {
         IDbAdmin dbAdmin;
+
         Doctor doctor = new Doctor();
         public int? IdEditar { get ; set ; }
 

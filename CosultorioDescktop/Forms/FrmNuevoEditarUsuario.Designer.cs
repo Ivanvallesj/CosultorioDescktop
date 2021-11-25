@@ -146,6 +146,7 @@ namespace ConsultorioDesktop.Forms
             this.Controls.Add(this.lblNombreUsuario);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmNuevoEditarUsuario";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Nuevo usuario";
             this.ResumeLayout(false);
             this.PerformLayout();

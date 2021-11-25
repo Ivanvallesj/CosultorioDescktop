@@ -115,6 +115,7 @@ namespace ConsultorioDesktop.Forms
             this.Controls.Add(this.dataGridUsuarios);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmGestionUsuarios";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Furmulario de Usuarios";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridUsuarios)).EndInit();
             this.ResumeLayout(false);

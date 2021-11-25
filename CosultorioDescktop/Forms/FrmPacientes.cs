@@ -51,9 +51,6 @@ namespace ConsultorioDesktop.Forms
                                            };
                     Grid.DataSource = pacientesAListar.IgnoreQueryFilters().Where(c=> c.Eliminado == false).ToList();
                     Grid.OcultarColumnas();
-
-
-
                 }
             }
         }
@@ -174,7 +171,27 @@ namespace ConsultorioDesktop.Forms
 
         private void TxtBusqueda_TextChanged(object sender, EventArgs e)
         {
-            Grid.DataSource = dbAdmin.ObtenerTodos(TxtBusqueda.Text);
+            ActualizarGrilla(TxtBusqueda.Text);
+        }
+
+        private void ActualizarGrilla(string textoAbuscar)
+        {
+            using (var db = new ConsultorioContext())
+            {
+                //creamos una coleccion para seleccionar los datos que queremos mostrar en la grilla 
+                var pacientesAListar = from paciente in db.Pacientes
+                                       select new
+                                       {
+                                           Id = paciente.Id,
+                                           Nombre = paciente.Nombre + " " + paciente.Apellido,
+                                           FechaNacimiento = paciente.FechaNacimiento,
+                                           Sexo = paciente.Sexo,
+                                           DoctorCabecera = paciente.Doctor.Apellido + " " + paciente.Doctor.Nombre,
+                                           Eliminado = paciente.Eliminado
+                                       };
+                Grid.DataSource = pacientesAListar.IgnoreQueryFilters().Where(c => c.Eliminado == false).Where(t => t.Nombre.Contains(textoAbuscar)).ToList();
+                Grid.OcultarColumnas();
+            }
         }
     }
 }

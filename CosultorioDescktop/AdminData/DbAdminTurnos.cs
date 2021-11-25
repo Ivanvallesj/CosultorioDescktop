@@ -60,7 +60,7 @@ namespace ConsultorioDesktop.AdminData
         public IEnumerable<object> ObtenerTodos(string cadenaBuscada)
         {
             using ConsultorioContext db = new ConsultorioContext();
-            return db.TurnoDetalles.Where(c => c.PacienteId.ToString().Contains(cadenaBuscada)).ToList();
+            return db.TurnoDetalles.Where(c => c.PacienteId.ToString().Contains(cadenaBuscada)).ToList().ToList();
         }
 
         public void Restaurar(int idSeleccionado)

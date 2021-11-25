@@ -203,7 +203,8 @@ namespace ConsultorioDesktop.Forms
             this.Controls.Add(this.GridDoctores);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmDoctores";
-            this.Text = "Fromulario principal de Doctores ";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Formulario principal de Doctores ";
             ((System.ComponentModel.ISupportInitialize)(this.GridPacientes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.GridDoctores)).EndInit();
             this.ResumeLayout(false);

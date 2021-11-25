@@ -286,6 +286,7 @@ namespace ConsultorioDesktop.Forms
             this.Controls.Add(this.TxtApellido);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmNuevoEditarDoctor";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Formulario de Doctores";
             ((System.ComponentModel.ISupportInitialize)(this.NUpDownDni)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numUpDtelefono)).EndInit();

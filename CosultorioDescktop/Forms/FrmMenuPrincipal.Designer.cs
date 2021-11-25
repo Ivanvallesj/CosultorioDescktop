@@ -76,14 +76,14 @@ namespace ConsultorioDesktop.Forms
             // administradoresDoctoresToolStripMenuItem
             // 
             this.administradoresDoctoresToolStripMenuItem.Name = "administradoresDoctoresToolStripMenuItem";
-            this.administradoresDoctoresToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.administradoresDoctoresToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.administradoresDoctoresToolStripMenuItem.Text = "Doctores";
             this.administradoresDoctoresToolStripMenuItem.Click += new System.EventHandler(this.administradoresDoctoresToolStripMenuItem_Click);
             // 
             // pacientesToolStripMenuItem
             // 
             this.pacientesToolStripMenuItem.Name = "pacientesToolStripMenuItem";
-            this.pacientesToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.pacientesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.pacientesToolStripMenuItem.Text = "Pacientes";
             this.pacientesToolStripMenuItem.Click += new System.EventHandler(this.pacientesToolStripMenuItem_Click);
             // 
@@ -137,6 +137,7 @@ namespace ConsultorioDesktop.Forms
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
             this.salirToolStripMenuItem.Size = new System.Drawing.Size(41, 20);
             this.salirToolStripMenuItem.Text = "Salir";
+            this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
             // toolStrip1
             // 

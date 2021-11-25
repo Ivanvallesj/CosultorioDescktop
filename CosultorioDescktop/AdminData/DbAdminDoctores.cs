@@ -56,7 +56,7 @@ namespace ConsultorioDesktop.AdminData
         {
             //instanciamos nuestro objeto db Context
             using ConsultorioContext db = new ConsultorioContext();
-            return db.Doctores.Where(c => c.Nombre.Contains(cadenaBuscada)).Include(u => u.Usuario).IgnoreQueryFilters().Where(c => c.Eliminado == false).ToList();
+            return db.Doctores.Where(c => c.Nombre.Contains(cadenaBuscada)).Include(u => u.Usuario).IgnoreQueryFilters().Where(c => c.Eliminado == false).ToList().ToList();
         }
 
             public IEnumerable<object> ObtenerEliminados()

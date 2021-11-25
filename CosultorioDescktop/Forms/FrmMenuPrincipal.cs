@@ -19,8 +19,8 @@ namespace ConsultorioDesktop.Forms
         }
         private void administradoresDoctoresToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var frmDoctores = new FrmDoctores(new DbAdminDoctores());
-            frmDoctores.ShowDialog();
+            var frmNuevoEditarDoctor = new FrmNuevoEditarDoctor();
+            frmNuevoEditarDoctor.ShowDialog();
 
         }
 
@@ -46,8 +46,8 @@ namespace ConsultorioDesktop.Forms
 
         private void pacientesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var frmPacientes = new FrmPacientes(new DbAdminPacientes());
-            frmPacientes.ShowDialog();
+            var frmNuevoEditarPaciente = new FrmNuevoEditarPaciente();
+            frmNuevoEditarPaciente.ShowDialog();
         }
 
         private void usuariosToolStripMenuItem_Click(object sender, EventArgs e)
@@ -90,6 +90,11 @@ namespace ConsultorioDesktop.Forms
         {
             var frmDoctores = new FrmDoctores(new DbAdminDoctores());
             frmDoctores.ShowDialog();
+        }
+
+        private void salirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
