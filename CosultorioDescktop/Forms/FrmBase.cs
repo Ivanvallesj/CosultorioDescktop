@@ -7,6 +7,9 @@ using System.Text;
 using System.Windows.Forms;
 using ConsultorioDesktop.ExtensionMethods;
 using ConsultorioDesktop.Interfaces;
+using ConsultorioDesktop.Models;
+using System.Linq;
+using Microsoft.EntityFrameworkCore;
 
 namespace ConsultorioDesktop.Forms
 {
@@ -30,8 +33,26 @@ namespace ConsultorioDesktop.Forms
             }
             else
             {
-                grid.DataSource = dbAdmin.ObtenerTodos();
-                grid.OcultarColumnas();
+                using (var db = new ConsultorioContext())
+                {
+                    //creamos una coleccion para seleccionar los datos que queremos mostrar en la grilla 
+                    var turnosAListar = from turno in db.TurnoDetalles
+                                           select new
+                                           {
+                                               Id = turno.Id,
+                                               Fecha = turno.FechaTurno,
+                                               Hora = turno.Hora.ToString("t"),
+                                               Tipo = turno.TipoTurno,
+                                               Doctor = turno.Doctor.Apellido + " " + turno.Doctor.Nombre,
+                                               Paciente = turno.Paciente.Apellido + " " + turno.Paciente.Nombre,
+                                               Eliminado = turno.Eliminado
+                                           };
+                    grid.DataSource = turnosAListar.IgnoreQueryFilters().Where(c => c.Eliminado == false).ToList();
+                    grid.OcultarColumnas();
+
+
+
+                }
             }
         }
 

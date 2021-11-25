@@ -44,7 +44,7 @@ namespace ConsultorioDesktop.Forms
             this.btnCambiarContraseña.Location = new System.Drawing.Point(343, 310);
             this.btnCambiarContraseña.Name = "btnCambiarContraseña";
             this.btnCambiarContraseña.Size = new System.Drawing.Size(127, 35);
-            this.btnCambiarContraseña.TabIndex = 10;
+            this.btnCambiarContraseña.TabIndex = 4;
             this.btnCambiarContraseña.Text = "CambiarContraseña";
             this.btnCambiarContraseña.UseVisualStyleBackColor = true;
             this.btnCambiarContraseña.Click += new System.EventHandler(this.btnCambiarContraseña_Click_1);
@@ -54,7 +54,7 @@ namespace ConsultorioDesktop.Forms
             this.btnSalir.Location = new System.Drawing.Point(632, 310);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(92, 35);
-            this.btnSalir.TabIndex = 9;
+            this.btnSalir.TabIndex = 5;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click_1);
@@ -64,7 +64,7 @@ namespace ConsultorioDesktop.Forms
             this.BtnEliminarUsuario.Location = new System.Drawing.Point(233, 310);
             this.BtnEliminarUsuario.Name = "BtnEliminarUsuario";
             this.BtnEliminarUsuario.Size = new System.Drawing.Size(92, 35);
-            this.BtnEliminarUsuario.TabIndex = 8;
+            this.BtnEliminarUsuario.TabIndex = 3;
             this.BtnEliminarUsuario.Text = "Eliminar";
             this.BtnEliminarUsuario.UseVisualStyleBackColor = true;
             this.BtnEliminarUsuario.Click += new System.EventHandler(this.BtnEliminarUsuario_Click_1);
@@ -74,7 +74,7 @@ namespace ConsultorioDesktop.Forms
             this.BtnEditarUsuario.Location = new System.Drawing.Point(119, 310);
             this.BtnEditarUsuario.Name = "BtnEditarUsuario";
             this.BtnEditarUsuario.Size = new System.Drawing.Size(96, 35);
-            this.BtnEditarUsuario.TabIndex = 7;
+            this.BtnEditarUsuario.TabIndex = 2;
             this.BtnEditarUsuario.Text = "Editar";
             this.BtnEditarUsuario.UseVisualStyleBackColor = true;
             this.BtnEditarUsuario.Click += new System.EventHandler(this.BtnEditarUsuario_Click_1);
@@ -84,7 +84,7 @@ namespace ConsultorioDesktop.Forms
             this.BtnAñadirUsuario.Location = new System.Drawing.Point(12, 310);
             this.BtnAñadirUsuario.Name = "BtnAñadirUsuario";
             this.BtnAñadirUsuario.Size = new System.Drawing.Size(90, 35);
-            this.BtnAñadirUsuario.TabIndex = 5;
+            this.BtnAñadirUsuario.TabIndex = 1;
             this.BtnAñadirUsuario.Text = "Añadir";
             this.BtnAñadirUsuario.UseVisualStyleBackColor = true;
             this.BtnAñadirUsuario.Click += new System.EventHandler(this.BtnAñadirUsuario_Click_1);

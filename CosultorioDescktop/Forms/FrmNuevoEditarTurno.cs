@@ -26,20 +26,32 @@ namespace ConsultorioDesktop.Forms
             CargarComboDoctor();
             CargarComboPaciente();
         }
+        public FrmNuevoEditarTurno(int idSeleccionado)
+        {
+            InitializeComponent();
+            CargarComboTipoTurno();
+            CargarComboDoctor();
+            CargarComboPaciente();
+            CboPaciente.Enabled = false;
+            CboPaciente.SelectedValue = idSeleccionado;
+        }
 
         private void CargarComboPaciente()
         {
             using (var db = new ConsultorioContext())
             {
+                
+                var listaPacientes = from paciente in db.Pacientes
+                                   select new { Id = paciente.Id, 
+                                                Nombre = paciente.Nombre + " " + paciente.Apellido,
+                                               };
+                //cargamos el combo de tutores con los existentes en la base de datos
+                CboPaciente.DataSource = listaPacientes.ToList();
                 //columna que queiro que se muestre en pantalla 
                 CboPaciente.DisplayMember = "nombre";
                 //columna que quiere seleccionar para que obtenga el valor
                 CboPaciente.ValueMember = "id";
-                var listaPacientes = from paciente in db.Pacientes
-                                   select new { id = paciente.Id, nombre = paciente.Nombre };
-                //cargamos el combo de tutores con los existentes en la base de datos
-                CboPaciente.DataSource = listaPacientes.ToList();
-                CboPaciente.SelectedValue = 0;
+
             }
         }
 
@@ -107,7 +119,7 @@ namespace ConsultorioDesktop.Forms
 
                 //le asignamos a sus propiedades el valor de cada uno de los cuadros de texto
                 turnoDetalle.FechaTurno = DtpFechaTurno.Value.Date;
-                turnoDetalle.Hora = DtpHora.Value.Date;
+                turnoDetalle.Hora = DtpHora.Value;
                 turnoDetalle.TipoTurno = (TipoTurnoEnum)CboTipoTurno.SelectedValue;
                 turnoDetalle.Precio = (int)NumUpDownPrecio.Value;
                 turnoDetalle.Bonos = (int)NumUpDownBonos.Value;

@@ -43,6 +43,8 @@ namespace ConsultorioDesktop.Forms
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.BtnTurnos = new System.Windows.Forms.ToolStripButton();
+            this.BtnPacientesG = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -58,7 +60,7 @@ namespace ConsultorioDesktop.Forms
             this.salirToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(779, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(914, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -141,10 +143,12 @@ namespace ConsultorioDesktop.Forms
             this.toolStrip1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.toolStrip1.ImageScalingSize = new System.Drawing.Size(25, 25);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.BtnTurnos});
+            this.BtnTurnos,
+            this.BtnPacientesG,
+            this.toolStripButton1});
             this.toolStrip1.Location = new System.Drawing.Point(0, 24);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(779, 47);
+            this.toolStrip1.Size = new System.Drawing.Size(914, 47);
             this.toolStrip1.TabIndex = 1;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -159,6 +163,28 @@ namespace ConsultorioDesktop.Forms
             this.BtnTurnos.ToolTipText = "Gestion de turnos";
             this.BtnTurnos.Click += new System.EventHandler(this.BtnTurnos_Click);
             // 
+            // BtnPacientesG
+            // 
+            this.BtnPacientesG.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.BtnPacientesG.Image = ((System.Drawing.Image)(resources.GetObject("BtnPacientesG.Image")));
+            this.BtnPacientesG.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.BtnPacientesG.Name = "BtnPacientesG";
+            this.BtnPacientesG.Size = new System.Drawing.Size(61, 44);
+            this.BtnPacientesG.Text = "Pacientes";
+            this.BtnPacientesG.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.BtnPacientesG.Click += new System.EventHandler(this.BtnPacientesG_Click);
+            // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(58, 44);
+            this.toolStripButton1.Text = "Doctores";
+            this.toolStripButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.toolStripButton1.ToolTipText = "Doctores";
+            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
+            // 
             // FrmMenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -166,7 +192,7 @@ namespace ConsultorioDesktop.Forms
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ClientSize = new System.Drawing.Size(779, 480);
+            this.ClientSize = new System.Drawing.Size(914, 444);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -200,5 +226,7 @@ namespace ConsultorioDesktop.Forms
         private System.Windows.Forms.ToolStripMenuItem doctoresToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem configuracionToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem parametrosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripButton BtnPacientesG;
+        private System.Windows.Forms.ToolStripButton toolStripButton1;
     }
 }

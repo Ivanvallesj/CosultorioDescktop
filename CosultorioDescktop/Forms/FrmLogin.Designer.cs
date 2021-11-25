@@ -64,7 +64,7 @@ namespace ConsultorioDesktop
             this.TxtUsuario.Location = new System.Drawing.Point(127, 23);
             this.TxtUsuario.Name = "TxtUsuario";
             this.TxtUsuario.Size = new System.Drawing.Size(236, 23);
-            this.TxtUsuario.TabIndex = 2;
+            this.TxtUsuario.TabIndex = 1;
             // 
             // TxtPassword
             // 
@@ -73,7 +73,7 @@ namespace ConsultorioDesktop
             this.TxtPassword.Name = "TxtPassword";
             this.TxtPassword.PasswordChar = '*';
             this.TxtPassword.Size = new System.Drawing.Size(236, 23);
-            this.TxtPassword.TabIndex = 3;
+            this.TxtPassword.TabIndex = 2;
             // 
             // BtnIngresar
             // 
@@ -81,7 +81,7 @@ namespace ConsultorioDesktop
             this.BtnIngresar.Location = new System.Drawing.Point(127, 136);
             this.BtnIngresar.Name = "BtnIngresar";
             this.BtnIngresar.Size = new System.Drawing.Size(95, 38);
-            this.BtnIngresar.TabIndex = 4;
+            this.BtnIngresar.TabIndex = 3;
             this.BtnIngresar.Text = "Ingresar";
             this.BtnIngresar.UseVisualStyleBackColor = true;
             this.BtnIngresar.Click += new System.EventHandler(this.BtnIngresar_Click);
@@ -92,7 +92,7 @@ namespace ConsultorioDesktop
             this.BtnCancelar.Location = new System.Drawing.Point(268, 136);
             this.BtnCancelar.Name = "BtnCancelar";
             this.BtnCancelar.Size = new System.Drawing.Size(95, 38);
-            this.BtnCancelar.TabIndex = 5;
+            this.BtnCancelar.TabIndex = 4;
             this.BtnCancelar.Text = "Cancelar";
             this.BtnCancelar.UseVisualStyleBackColor = true;
             this.BtnCancelar.Click += new System.EventHandler(this.BtnCancelar_Click);

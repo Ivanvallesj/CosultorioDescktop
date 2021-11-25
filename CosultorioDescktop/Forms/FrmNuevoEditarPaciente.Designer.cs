@@ -54,14 +54,19 @@ namespace ConsultorioDesktop.Forms
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.CboDoctor = new System.Windows.Forms.ComboBox();
+            this.BtnCapturarFoto = new System.Windows.Forms.Button();
+            this.BtnIniciarDetenerCamara = new System.Windows.Forms.Button();
+            this.BtnExaminar = new System.Windows.Forms.Button();
+            this.PbxImagen = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.numUpDtelefono)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NUpDownDni)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbxImagen)).BeginInit();
             this.SuspendLayout();
             // 
             // numUpDtelefono
             // 
             this.numUpDtelefono.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.numUpDtelefono.Location = new System.Drawing.Point(604, 129);
+            this.numUpDtelefono.Location = new System.Drawing.Point(174, 400);
             this.numUpDtelefono.Maximum = new decimal(new int[] {
             -727379969,
             232,
@@ -69,13 +74,13 @@ namespace ConsultorioDesktop.Forms
             0});
             this.numUpDtelefono.Name = "numUpDtelefono";
             this.numUpDtelefono.Size = new System.Drawing.Size(228, 29);
-            this.numUpDtelefono.TabIndex = 58;
+            this.numUpDtelefono.TabIndex = 8;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(474, 137);
+            this.label2.Location = new System.Drawing.Point(44, 408);
             this.label2.Name = "label2";
             this.label2.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label2.Size = new System.Drawing.Size(71, 21);
@@ -88,7 +93,7 @@ namespace ConsultorioDesktop.Forms
             this.TxtDireccion.Location = new System.Drawing.Point(603, 91);
             this.TxtDireccion.Name = "TxtDireccion";
             this.TxtDireccion.Size = new System.Drawing.Size(228, 29);
-            this.TxtDireccion.TabIndex = 56;
+            this.TxtDireccion.TabIndex = 1;
             // 
             // TxtEmail
             // 
@@ -96,7 +101,7 @@ namespace ConsultorioDesktop.Forms
             this.TxtEmail.Location = new System.Drawing.Point(176, 293);
             this.TxtEmail.Name = "TxtEmail";
             this.TxtEmail.Size = new System.Drawing.Size(228, 29);
-            this.TxtEmail.TabIndex = 55;
+            this.TxtEmail.TabIndex = 6;
             // 
             // label1
             // 
@@ -116,7 +121,7 @@ namespace ConsultorioDesktop.Forms
             this.CboObraSocial.Location = new System.Drawing.Point(603, 38);
             this.CboObraSocial.Name = "CboObraSocial";
             this.CboObraSocial.Size = new System.Drawing.Size(228, 29);
-            this.CboObraSocial.TabIndex = 54;
+            this.CboObraSocial.TabIndex = 10;
             // 
             // LblCalendario
             // 
@@ -147,24 +152,24 @@ namespace ConsultorioDesktop.Forms
             this.CboSexo.Location = new System.Drawing.Point(176, 187);
             this.CboSexo.Name = "CboSexo";
             this.CboSexo.Size = new System.Drawing.Size(228, 29);
-            this.CboSexo.TabIndex = 49;
+            this.CboSexo.TabIndex = 4;
             // 
             // BtnCancelar
             // 
-            this.BtnCancelar.Location = new System.Drawing.Point(603, 400);
+            this.BtnCancelar.Location = new System.Drawing.Point(734, 525);
             this.BtnCancelar.Name = "BtnCancelar";
-            this.BtnCancelar.Size = new System.Drawing.Size(97, 62);
-            this.BtnCancelar.TabIndex = 52;
+            this.BtnCancelar.Size = new System.Drawing.Size(97, 35);
+            this.BtnCancelar.TabIndex = 16;
             this.BtnCancelar.Text = "Cancelar";
             this.BtnCancelar.UseVisualStyleBackColor = true;
             this.BtnCancelar.Click += new System.EventHandler(this.BtnCancelar_Click);
             // 
             // BtnGuardar
             // 
-            this.BtnGuardar.Location = new System.Drawing.Point(474, 400);
+            this.BtnGuardar.Location = new System.Drawing.Point(603, 525);
             this.BtnGuardar.Name = "BtnGuardar";
-            this.BtnGuardar.Size = new System.Drawing.Size(97, 62);
-            this.BtnGuardar.TabIndex = 51;
+            this.BtnGuardar.Size = new System.Drawing.Size(97, 35);
+            this.BtnGuardar.TabIndex = 15;
             this.BtnGuardar.Text = "Guardar";
             this.BtnGuardar.UseVisualStyleBackColor = true;
             this.BtnGuardar.Click += new System.EventHandler(this.BtnGuardar_Click);
@@ -187,7 +192,7 @@ namespace ConsultorioDesktop.Forms
             this.DtpFechaNacimiento.Location = new System.Drawing.Point(175, 348);
             this.DtpFechaNacimiento.Name = "DtpFechaNacimiento";
             this.DtpFechaNacimiento.Size = new System.Drawing.Size(227, 23);
-            this.DtpFechaNacimiento.TabIndex = 50;
+            this.DtpFechaNacimiento.TabIndex = 7;
             // 
             // NUpDownDni
             // 
@@ -200,7 +205,7 @@ namespace ConsultorioDesktop.Forms
             0});
             this.NUpDownDni.Name = "NUpDownDni";
             this.NUpDownDni.Size = new System.Drawing.Size(228, 29);
-            this.NUpDownDni.TabIndex = 48;
+            this.NUpDownDni.TabIndex = 3;
             // 
             // LblDni
             // 
@@ -230,7 +235,7 @@ namespace ConsultorioDesktop.Forms
             this.TxtNombre.Location = new System.Drawing.Point(176, 41);
             this.TxtNombre.Name = "TxtNombre";
             this.TxtNombre.Size = new System.Drawing.Size(228, 29);
-            this.TxtNombre.TabIndex = 39;
+            this.TxtNombre.TabIndex = 1;
             // 
             // LblNombre
             // 
@@ -260,7 +265,7 @@ namespace ConsultorioDesktop.Forms
             this.TxtApellido.Location = new System.Drawing.Point(176, 83);
             this.TxtApellido.Name = "TxtApellido";
             this.TxtApellido.Size = new System.Drawing.Size(228, 29);
-            this.TxtApellido.TabIndex = 45;
+            this.TxtApellido.TabIndex = 2;
             // 
             // TxtLocalidad
             // 
@@ -268,7 +273,7 @@ namespace ConsultorioDesktop.Forms
             this.TxtLocalidad.Location = new System.Drawing.Point(176, 236);
             this.TxtLocalidad.Name = "TxtLocalidad";
             this.TxtLocalidad.Size = new System.Drawing.Size(228, 29);
-            this.TxtLocalidad.TabIndex = 60;
+            this.TxtLocalidad.TabIndex = 5;
             // 
             // label3
             // 
@@ -285,7 +290,7 @@ namespace ConsultorioDesktop.Forms
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(474, 187);
+            this.label4.Location = new System.Drawing.Point(44, 458);
             this.label4.Name = "label4";
             this.label4.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label4.Size = new System.Drawing.Size(60, 21);
@@ -296,17 +301,61 @@ namespace ConsultorioDesktop.Forms
             // 
             this.CboDoctor.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.CboDoctor.FormattingEnabled = true;
-            this.CboDoctor.Location = new System.Drawing.Point(604, 187);
+            this.CboDoctor.Location = new System.Drawing.Point(174, 458);
             this.CboDoctor.Name = "CboDoctor";
             this.CboDoctor.Size = new System.Drawing.Size(228, 29);
-            this.CboDoctor.TabIndex = 62;
+            this.CboDoctor.TabIndex = 9;
+            // 
+            // BtnCapturarFoto
+            // 
+            this.BtnCapturarFoto.Location = new System.Drawing.Point(723, 416);
+            this.BtnCapturarFoto.Name = "BtnCapturarFoto";
+            this.BtnCapturarFoto.Size = new System.Drawing.Size(103, 25);
+            this.BtnCapturarFoto.TabIndex = 14;
+            this.BtnCapturarFoto.Text = "Capturar foto";
+            this.BtnCapturarFoto.UseVisualStyleBackColor = true;
+            this.BtnCapturarFoto.Click += new System.EventHandler(this.BtnCapturarFoto_Click);
+            // 
+            // BtnIniciarDetenerCamara
+            // 
+            this.BtnIniciarDetenerCamara.Location = new System.Drawing.Point(603, 416);
+            this.BtnIniciarDetenerCamara.Name = "BtnIniciarDetenerCamara";
+            this.BtnIniciarDetenerCamara.Size = new System.Drawing.Size(103, 25);
+            this.BtnIniciarDetenerCamara.TabIndex = 13;
+            this.BtnIniciarDetenerCamara.Text = "Iniciar cámara";
+            this.BtnIniciarDetenerCamara.UseVisualStyleBackColor = true;
+            this.BtnIniciarDetenerCamara.Click += new System.EventHandler(this.BtnIniciarDetenerCamara_Click);
+            // 
+            // BtnExaminar
+            // 
+            this.BtnExaminar.Location = new System.Drawing.Point(603, 370);
+            this.BtnExaminar.Name = "BtnExaminar";
+            this.BtnExaminar.Size = new System.Drawing.Size(103, 25);
+            this.BtnExaminar.TabIndex = 12;
+            this.BtnExaminar.Text = "Cargar Imagen";
+            this.BtnExaminar.UseVisualStyleBackColor = true;
+            this.BtnExaminar.Click += new System.EventHandler(this.BtnExaminar_Click);
+            // 
+            // PbxImagen
+            // 
+            this.PbxImagen.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.PbxImagen.Location = new System.Drawing.Point(603, 146);
+            this.PbxImagen.Name = "PbxImagen";
+            this.PbxImagen.Size = new System.Drawing.Size(203, 196);
+            this.PbxImagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PbxImagen.TabIndex = 63;
+            this.PbxImagen.TabStop = false;
             // 
             // FrmNuevoEditarPaciente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.ClientSize = new System.Drawing.Size(844, 496);
+            this.ClientSize = new System.Drawing.Size(892, 572);
+            this.Controls.Add(this.BtnCapturarFoto);
+            this.Controls.Add(this.BtnIniciarDetenerCamara);
+            this.Controls.Add(this.BtnExaminar);
+            this.Controls.Add(this.PbxImagen);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.CboDoctor);
             this.Controls.Add(this.TxtLocalidad);
@@ -336,6 +385,7 @@ namespace ConsultorioDesktop.Forms
             this.Text = "Formulario de pacientes";
             ((System.ComponentModel.ISupportInitialize)(this.numUpDtelefono)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NUpDownDni)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbxImagen)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -367,5 +417,9 @@ namespace ConsultorioDesktop.Forms
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox CboDoctor;
+        private System.Windows.Forms.Button BtnCapturarFoto;
+        private System.Windows.Forms.Button BtnIniciarDetenerCamara;
+        private System.Windows.Forms.Button BtnExaminar;
+        private System.Windows.Forms.PictureBox PbxImagen;
     }
 }

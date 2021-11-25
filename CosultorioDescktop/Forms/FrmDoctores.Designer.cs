@@ -41,36 +41,38 @@ namespace ConsultorioDesktop.Forms
             this.BtnNuevo = new System.Windows.Forms.Button();
             this.GridDoctores = new System.Windows.Forms.DataGridView();
             this.chkVerEliminados = new System.Windows.Forms.CheckBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.GridPacientes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GridDoctores)).BeginInit();
             this.SuspendLayout();
             // 
             // BtnAgregarPaciente
             // 
-            this.BtnAgregarPaciente.Location = new System.Drawing.Point(82, 417);
+            this.BtnAgregarPaciente.Location = new System.Drawing.Point(82, 445);
             this.BtnAgregarPaciente.Name = "BtnAgregarPaciente";
             this.BtnAgregarPaciente.Size = new System.Drawing.Size(123, 30);
-            this.BtnAgregarPaciente.TabIndex = 8;
+            this.BtnAgregarPaciente.TabIndex = 6;
             this.BtnAgregarPaciente.Text = "&Nuevo Paciente";
             this.BtnAgregarPaciente.UseVisualStyleBackColor = true;
             this.BtnAgregarPaciente.Click += new System.EventHandler(this.BtnAgregarPaciente_Click);
             // 
             // BtnEditarPaciente
             // 
-            this.BtnEditarPaciente.Location = new System.Drawing.Point(263, 417);
+            this.BtnEditarPaciente.Location = new System.Drawing.Point(263, 445);
             this.BtnEditarPaciente.Name = "BtnEditarPaciente";
             this.BtnEditarPaciente.Size = new System.Drawing.Size(105, 30);
-            this.BtnEditarPaciente.TabIndex = 10;
+            this.BtnEditarPaciente.TabIndex = 7;
             this.BtnEditarPaciente.Text = "&Editar Paciente";
             this.BtnEditarPaciente.UseVisualStyleBackColor = true;
             this.BtnEditarPaciente.Click += new System.EventHandler(this.BtnEditarPaciente_Click);
             // 
             // BtnEliminarPaciente
             // 
-            this.BtnEliminarPaciente.Location = new System.Drawing.Point(429, 417);
+            this.BtnEliminarPaciente.Location = new System.Drawing.Point(429, 445);
             this.BtnEliminarPaciente.Name = "BtnEliminarPaciente";
             this.BtnEliminarPaciente.Size = new System.Drawing.Size(121, 30);
-            this.BtnEliminarPaciente.TabIndex = 12;
+            this.BtnEliminarPaciente.TabIndex = 8;
             this.BtnEliminarPaciente.Text = "E&liminar Paciente";
             this.BtnEliminarPaciente.UseVisualStyleBackColor = true;
             this.BtnEliminarPaciente.Click += new System.EventHandler(this.BtnEliminarPaciente_Click);
@@ -80,7 +82,7 @@ namespace ConsultorioDesktop.Forms
             this.GridPacientes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.GridPacientes.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.GridPacientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.GridPacientes.Location = new System.Drawing.Point(12, 223);
+            this.GridPacientes.Location = new System.Drawing.Point(12, 251);
             this.GridPacientes.Name = "GridPacientes";
             this.GridPacientes.ReadOnly = true;
             this.GridPacientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -90,16 +92,16 @@ namespace ConsultorioDesktop.Forms
             // 
             // TxtBusqueda
             // 
-            this.TxtBusqueda.Location = new System.Drawing.Point(670, 130);
+            this.TxtBusqueda.Location = new System.Drawing.Point(673, 158);
             this.TxtBusqueda.Name = "TxtBusqueda";
             this.TxtBusqueda.Size = new System.Drawing.Size(249, 23);
-            this.TxtBusqueda.TabIndex = 15;
+            this.TxtBusqueda.TabIndex = 4;
             this.TxtBusqueda.TextChanged += new System.EventHandler(this.TxtBusqueda_TextChanged);
             // 
             // LblBuscar
             // 
             this.LblBuscar.AutoSize = true;
-            this.LblBuscar.Location = new System.Drawing.Point(766, 112);
+            this.LblBuscar.Location = new System.Drawing.Point(769, 140);
             this.LblBuscar.Name = "LblBuscar";
             this.LblBuscar.Size = new System.Drawing.Size(45, 15);
             this.LblBuscar.TabIndex = 14;
@@ -107,30 +109,30 @@ namespace ConsultorioDesktop.Forms
             // 
             // BtnEliminar
             // 
-            this.BtnEliminar.Location = new System.Drawing.Point(833, 12);
+            this.BtnEliminar.Location = new System.Drawing.Point(836, 40);
             this.BtnEliminar.Name = "BtnEliminar";
             this.BtnEliminar.Size = new System.Drawing.Size(86, 30);
-            this.BtnEliminar.TabIndex = 13;
+            this.BtnEliminar.TabIndex = 3;
             this.BtnEliminar.Text = "Eliminar";
             this.BtnEliminar.UseVisualStyleBackColor = true;
             this.BtnEliminar.Click += new System.EventHandler(this.BtnEliminar_Click);
             // 
             // BtnEditar
             // 
-            this.BtnEditar.Location = new System.Drawing.Point(744, 12);
+            this.BtnEditar.Location = new System.Drawing.Point(747, 40);
             this.BtnEditar.Name = "BtnEditar";
             this.BtnEditar.Size = new System.Drawing.Size(83, 30);
-            this.BtnEditar.TabIndex = 11;
+            this.BtnEditar.TabIndex = 2;
             this.BtnEditar.Text = "Editar";
             this.BtnEditar.UseVisualStyleBackColor = true;
             this.BtnEditar.Click += new System.EventHandler(this.BtnEditar_Click);
             // 
             // BtnNuevo
             // 
-            this.BtnNuevo.Location = new System.Drawing.Point(658, 12);
+            this.BtnNuevo.Location = new System.Drawing.Point(661, 40);
             this.BtnNuevo.Name = "BtnNuevo";
             this.BtnNuevo.Size = new System.Drawing.Size(80, 30);
-            this.BtnNuevo.TabIndex = 9;
+            this.BtnNuevo.TabIndex = 1;
             this.BtnNuevo.Text = "&Nuevo";
             this.BtnNuevo.UseVisualStyleBackColor = true;
             this.BtnNuevo.Click += new System.EventHandler(this.BtnNuevo_Click);
@@ -140,7 +142,7 @@ namespace ConsultorioDesktop.Forms
             this.GridDoctores.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.GridDoctores.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.GridDoctores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.GridDoctores.Location = new System.Drawing.Point(12, 12);
+            this.GridDoctores.Location = new System.Drawing.Point(12, 40);
             this.GridDoctores.Name = "GridDoctores";
             this.GridDoctores.ReadOnly = true;
             this.GridDoctores.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -152,13 +154,33 @@ namespace ConsultorioDesktop.Forms
             // chkVerEliminados
             // 
             this.chkVerEliminados.AutoSize = true;
-            this.chkVerEliminados.Location = new System.Drawing.Point(670, 170);
+            this.chkVerEliminados.Location = new System.Drawing.Point(673, 198);
             this.chkVerEliminados.Name = "chkVerEliminados";
             this.chkVerEliminados.Size = new System.Drawing.Size(103, 19);
-            this.chkVerEliminados.TabIndex = 16;
+            this.chkVerEliminados.TabIndex = 5;
             this.chkVerEliminados.Text = "Ver Eliminados";
             this.chkVerEliminados.UseVisualStyleBackColor = true;
             this.chkVerEliminados.CheckedChanged += new System.EventHandler(this.chkVerEliminados_CheckedChanged);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.label2.Location = new System.Drawing.Point(12, 12);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(89, 25);
+            this.label2.TabIndex = 23;
+            this.label2.Text = "Doctores";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(12, 223);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(94, 25);
+            this.label1.TabIndex = 24;
+            this.label1.Text = "Pacientes";
             // 
             // FrmDoctores
             // 
@@ -166,6 +188,8 @@ namespace ConsultorioDesktop.Forms
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(962, 499);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.chkVerEliminados);
             this.Controls.Add(this.BtnAgregarPaciente);
             this.Controls.Add(this.BtnEditarPaciente);
@@ -200,5 +224,7 @@ namespace ConsultorioDesktop.Forms
         private System.Windows.Forms.Button BtnNuevo;
         private System.Windows.Forms.DataGridView GridDoctores;
         private System.Windows.Forms.CheckBox chkVerEliminados;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
     }
 }

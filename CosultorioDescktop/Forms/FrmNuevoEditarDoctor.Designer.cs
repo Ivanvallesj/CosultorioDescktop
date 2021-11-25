@@ -83,14 +83,14 @@ namespace ConsultorioDesktop.Forms
             this.CboSexo.Location = new System.Drawing.Point(186, 174);
             this.CboSexo.Name = "CboSexo";
             this.CboSexo.Size = new System.Drawing.Size(228, 29);
-            this.CboSexo.TabIndex = 25;
+            this.CboSexo.TabIndex = 4;
             // 
             // BtnCancelar
             // 
             this.BtnCancelar.Location = new System.Drawing.Point(480, 398);
             this.BtnCancelar.Name = "BtnCancelar";
             this.BtnCancelar.Size = new System.Drawing.Size(107, 58);
-            this.BtnCancelar.TabIndex = 32;
+            this.BtnCancelar.TabIndex = 11;
             this.BtnCancelar.Text = "Cancelar";
             this.BtnCancelar.UseVisualStyleBackColor = true;
             this.BtnCancelar.Click += new System.EventHandler(this.BtnCancelar_Click);
@@ -100,7 +100,7 @@ namespace ConsultorioDesktop.Forms
             this.BtnGuardar.Location = new System.Drawing.Point(480, 334);
             this.BtnGuardar.Name = "BtnGuardar";
             this.BtnGuardar.Size = new System.Drawing.Size(107, 58);
-            this.BtnGuardar.TabIndex = 31;
+            this.BtnGuardar.TabIndex = 10;
             this.BtnGuardar.Text = "Guardar";
             this.BtnGuardar.UseVisualStyleBackColor = true;
             this.BtnGuardar.Click += new System.EventHandler(this.BtnGuardar_Click);
@@ -123,7 +123,7 @@ namespace ConsultorioDesktop.Forms
             this.DtpFechaNacimiento.Location = new System.Drawing.Point(187, 462);
             this.DtpFechaNacimiento.Name = "DtpFechaNacimiento";
             this.DtpFechaNacimiento.Size = new System.Drawing.Size(227, 23);
-            this.DtpFechaNacimiento.TabIndex = 26;
+            this.DtpFechaNacimiento.TabIndex = 9;
             // 
             // NUpDownDni
             // 
@@ -136,7 +136,7 @@ namespace ConsultorioDesktop.Forms
             0});
             this.NUpDownDni.Name = "NUpDownDni";
             this.NUpDownDni.Size = new System.Drawing.Size(228, 29);
-            this.NUpDownDni.TabIndex = 23;
+            this.NUpDownDni.TabIndex = 3;
             // 
             // LblDni
             // 
@@ -166,7 +166,7 @@ namespace ConsultorioDesktop.Forms
             this.TxtNombre.Location = new System.Drawing.Point(186, 28);
             this.TxtNombre.Name = "TxtNombre";
             this.TxtNombre.Size = new System.Drawing.Size(228, 29);
-            this.TxtNombre.TabIndex = 12;
+            this.TxtNombre.TabIndex = 1;
             // 
             // LblNombre
             // 
@@ -196,7 +196,7 @@ namespace ConsultorioDesktop.Forms
             this.TxtApellido.Location = new System.Drawing.Point(186, 70);
             this.TxtApellido.Name = "TxtApellido";
             this.TxtApellido.Size = new System.Drawing.Size(228, 29);
-            this.TxtApellido.TabIndex = 19;
+            this.TxtApellido.TabIndex = 2;
             // 
             // label1
             // 
@@ -216,7 +216,7 @@ namespace ConsultorioDesktop.Forms
             this.CboEspecializacion.Location = new System.Drawing.Point(186, 334);
             this.CboEspecializacion.Name = "CboEspecializacion";
             this.CboEspecializacion.Size = new System.Drawing.Size(228, 29);
-            this.CboEspecializacion.TabIndex = 34;
+            this.CboEspecializacion.TabIndex = 7;
             // 
             // TxtEmail
             // 
@@ -224,7 +224,7 @@ namespace ConsultorioDesktop.Forms
             this.TxtEmail.Location = new System.Drawing.Point(186, 282);
             this.TxtEmail.Name = "TxtEmail";
             this.TxtEmail.Size = new System.Drawing.Size(228, 29);
-            this.TxtEmail.TabIndex = 35;
+            this.TxtEmail.TabIndex = 6;
             // 
             // TxtLocalidad
             // 
@@ -232,7 +232,7 @@ namespace ConsultorioDesktop.Forms
             this.TxtLocalidad.Location = new System.Drawing.Point(186, 228);
             this.TxtLocalidad.Name = "TxtLocalidad";
             this.TxtLocalidad.Size = new System.Drawing.Size(228, 29);
-            this.TxtLocalidad.TabIndex = 36;
+            this.TxtLocalidad.TabIndex = 5;
             // 
             // label2
             // 
@@ -256,7 +256,7 @@ namespace ConsultorioDesktop.Forms
             0});
             this.numUpDtelefono.Name = "numUpDtelefono";
             this.numUpDtelefono.Size = new System.Drawing.Size(228, 29);
-            this.numUpDtelefono.TabIndex = 38;
+            this.numUpDtelefono.TabIndex = 8;
             // 
             // FrmNuevoEditarDoctor
             // 

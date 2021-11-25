@@ -8,11 +8,13 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using System.Linq;
+using ConsultorioDesktop.Core;
 
 namespace ConsultorioDesktop.Forms
 {
     public partial class FrmNuevoEditarPaciente : Form
     {
+        WebCam webCam;
         public int? IdEditar { get; set; }
         Paciente paciente = new Paciente();
 
@@ -26,16 +28,19 @@ namespace ConsultorioDesktop.Forms
             LlenarComboObrasocial();
             CboDoctor.Enabled = false;
             CboDoctor.SelectedValue = doctor.Id;
+            webCam = new WebCam(this, AutoActivate: false, PbxImagen);
 
         }
         // editar paciente existente desde el formulario FrmTutores
 
         public FrmNuevoEditarPaciente(Doctor doctor, int idPacienteSeleccionado)
         {
+
             InitializeComponent();
             CargarCboDoctor();
             LlenarComboSexo();
             LlenarComboObrasocial();
+            webCam = new WebCam(this, AutoActivate: false, PbxImagen);
             CboDoctor.Enabled = false;
             CboDoctor.SelectedValue = doctor.Id;
             if (idPacienteSeleccionado != 0)
@@ -66,6 +71,7 @@ namespace ConsultorioDesktop.Forms
             CargarCboDoctor();
             LlenarComboSexo();
             LlenarComboObrasocial();
+            webCam = new WebCam(this, AutoActivate: false, PbxImagen);
         }
 
         //Editando un paciente desde FrmPacientes
@@ -75,6 +81,7 @@ namespace ConsultorioDesktop.Forms
             CargarCboDoctor();
             LlenarComboSexo();
             LlenarComboObrasocial();
+            webCam = new WebCam(this, AutoActivate: false, PbxImagen);
             if (idSeleccionado != 0)
             {
                 IdEditar = idSeleccionado;
@@ -99,6 +106,8 @@ namespace ConsultorioDesktop.Forms
                 TxtEmail.Text = paciente.Email;
                 TxtLocalidad.Text = paciente.Localidad;
                 numUpDtelefono.Value = (decimal)paciente.Telefono;
+                if (paciente.Imagen != null)
+                    PbxImagen.Image = HelperConsultorio.convertirBytesAImagen(paciente.Imagen);
             }
         }
 
@@ -129,8 +138,13 @@ namespace ConsultorioDesktop.Forms
                 paciente.Dni = (int)NUpDownDni.Value;
                 paciente.Telefono = (double)numUpDtelefono.Value;
                 paciente.FechaNacimiento = DtpFechaNacimiento.Value.Date;
-
-
+                if (PbxImagen.Image != null)
+                {
+                    paciente.Imagen = HelperConsultorio.convertirImagenABytes(PbxImagen.Image);
+                    BtnCapturarFoto.Enabled = true;
+                }
+                else
+                    BtnCapturarFoto.Enabled = false;
                 //si el id del Paciente a editar es nulo agregamos un Calendario a la tabla
                 if (IdEditar == null)
                     //lo agregamos al objeto Paciente al objeto DbCOntext
@@ -150,6 +164,63 @@ namespace ConsultorioDesktop.Forms
         private void BtnCancelar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void BtnExaminar_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog ofdAbrirArchivo = new OpenFileDialog();
+            string filtro = "Todas las imágenes|*.jpg;*.gif;*.png;*.bmp;*.jpeg";
+            filtro += "|JPG (*.jpg)|*.jpg";
+            filtro += "|JPEG (*.jpeg)|*.jpeg";
+            filtro += "|GIF (*.gif)|*.gif";
+            filtro += "|PNG (*.png)|*.png";
+            filtro += "|BMP (*.bmp)|*.bmp";
+
+            ofdAbrirArchivo.Filter = filtro;
+            ofdAbrirArchivo.ShowDialog();
+
+            if (ofdAbrirArchivo.FileName != "")
+            {
+                PbxImagen.Image = new Bitmap(ofdAbrirArchivo.FileName);
+            }
+        }
+
+        private void BtnIniciarDetenerCamara_Click(object sender, EventArgs e)
+        {
+            if (BtnIniciarDetenerCamara.Text == "Iniciar cámara")
+            {
+                InicializarCamara();
+            }
+            else
+            {
+                DetenerCamara();
+            }
+        }
+        private void DetenerCamara()
+        {
+            webCam.Deinitalize();
+            BtnIniciarDetenerCamara.Text = "Iniciar cámara";
+            BtnCapturarFoto.Text = "Borrar foto";
+        }
+
+        private void InicializarCamara()
+        {
+            webCam.Initalize();
+            BtnIniciarDetenerCamara.Text = "Detener cámara";
+            BtnCapturarFoto.Text = "Capturar foto";
+            //RefrescarPaneles();
+            BtnCapturarFoto.Enabled = true;
+        }
+
+        private void BtnCapturarFoto_Click(object sender, EventArgs e)
+        {
+            if (BtnCapturarFoto.Text == "Borrar foto")
+            {
+                PbxImagen.Image = null;
+                BtnCapturarFoto.Enabled = false;
+            }
+            else
+                DetenerCamara();
         }
     }
 }

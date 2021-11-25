@@ -36,7 +36,11 @@ namespace ConsultorioDesktop.Forms
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FrmListadoPacientes";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
             this.Text = "Listado de Pacientes";
             this.Load += new System.EventHandler(this.FrmListadoPacientes_Load);
             this.ResumeLayout(false);

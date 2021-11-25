@@ -79,5 +79,17 @@ namespace ConsultorioDesktop.Forms
             var frmParametros = new FrmParametros(this);
             frmParametros.ShowDialog();
         }
+
+        private void BtnPacientesG_Click(object sender, EventArgs e)
+        {
+            var frmPacientes = new FrmPacientes(new DbAdminPacientes());
+            frmPacientes.ShowDialog();
+        }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            var frmDoctores = new FrmDoctores(new DbAdminDoctores());
+            frmDoctores.ShowDialog();
+        }
     }
 }

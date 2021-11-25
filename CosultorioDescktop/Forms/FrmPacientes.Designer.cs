@@ -39,6 +39,8 @@ namespace ConsultorioDesktop.Forms
             this.label1 = new System.Windows.Forms.Label();
             this.TxtBusqueda = new System.Windows.Forms.TextBox();
             this.chkVerEliminados = new System.Windows.Forms.CheckBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.GridTurnos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Grid)).BeginInit();
             this.SuspendLayout();
@@ -48,9 +50,10 @@ namespace ConsultorioDesktop.Forms
             this.BtnAgregar.Location = new System.Drawing.Point(630, 398);
             this.BtnAgregar.Name = "BtnAgregar";
             this.BtnAgregar.Size = new System.Drawing.Size(113, 33);
-            this.BtnAgregar.TabIndex = 20;
+            this.BtnAgregar.TabIndex = 6;
             this.BtnAgregar.Text = "Cargar Turno";
             this.BtnAgregar.UseVisualStyleBackColor = true;
+            this.BtnAgregar.Click += new System.EventHandler(this.BtnAgregar_Click);
             // 
             // GridTurnos
             // 
@@ -70,7 +73,7 @@ namespace ConsultorioDesktop.Forms
             this.Grid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.Grid.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.Grid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.Grid.Location = new System.Drawing.Point(12, 15);
+            this.Grid.Location = new System.Drawing.Point(13, 31);
             this.Grid.Name = "Grid";
             this.Grid.ReadOnly = true;
             this.Grid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -84,7 +87,7 @@ namespace ConsultorioDesktop.Forms
             this.BtnNuevo.Location = new System.Drawing.Point(609, 68);
             this.BtnNuevo.Name = "BtnNuevo";
             this.BtnNuevo.Size = new System.Drawing.Size(80, 30);
-            this.BtnNuevo.TabIndex = 13;
+            this.BtnNuevo.TabIndex = 1;
             this.BtnNuevo.Text = "&Nuevo";
             this.BtnNuevo.UseVisualStyleBackColor = true;
             this.BtnNuevo.Click += new System.EventHandler(this.BtnNuevo_Click);
@@ -94,7 +97,7 @@ namespace ConsultorioDesktop.Forms
             this.BtnEditar.Location = new System.Drawing.Point(695, 68);
             this.BtnEditar.Name = "BtnEditar";
             this.BtnEditar.Size = new System.Drawing.Size(83, 30);
-            this.BtnEditar.TabIndex = 14;
+            this.BtnEditar.TabIndex = 2;
             this.BtnEditar.Text = "Editar";
             this.BtnEditar.UseVisualStyleBackColor = true;
             this.BtnEditar.Click += new System.EventHandler(this.BtnEditar_Click);
@@ -104,7 +107,7 @@ namespace ConsultorioDesktop.Forms
             this.BtnEliminar.Location = new System.Drawing.Point(784, 68);
             this.BtnEliminar.Name = "BtnEliminar";
             this.BtnEliminar.Size = new System.Drawing.Size(86, 30);
-            this.BtnEliminar.TabIndex = 15;
+            this.BtnEliminar.TabIndex = 3;
             this.BtnEliminar.Text = "Eliminar";
             this.BtnEliminar.UseVisualStyleBackColor = true;
             this.BtnEliminar.Click += new System.EventHandler(this.BtnEliminar_Click);
@@ -123,18 +126,39 @@ namespace ConsultorioDesktop.Forms
             this.TxtBusqueda.Location = new System.Drawing.Point(665, 120);
             this.TxtBusqueda.Name = "TxtBusqueda";
             this.TxtBusqueda.Size = new System.Drawing.Size(234, 23);
-            this.TxtBusqueda.TabIndex = 17;
+            this.TxtBusqueda.TabIndex = 4;
+            this.TxtBusqueda.TextChanged += new System.EventHandler(this.TxtBusqueda_TextChanged);
             // 
             // chkVerEliminados
             // 
             this.chkVerEliminados.AutoSize = true;
-            this.chkVerEliminados.Location = new System.Drawing.Point(609, 178);
+            this.chkVerEliminados.Location = new System.Drawing.Point(609, 194);
             this.chkVerEliminados.Name = "chkVerEliminados";
             this.chkVerEliminados.Size = new System.Drawing.Size(103, 19);
-            this.chkVerEliminados.TabIndex = 21;
+            this.chkVerEliminados.TabIndex = 5;
             this.chkVerEliminados.Text = "Ver Eliminados";
             this.chkVerEliminados.UseVisualStyleBackColor = true;
             this.chkVerEliminados.CheckedChanged += new System.EventHandler(this.chkVerEliminados_CheckedChanged);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.label2.Location = new System.Drawing.Point(13, 216);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(165, 25);
+            this.label2.TabIndex = 22;
+            this.label2.Text = "Turnos Asignados";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.label3.Location = new System.Drawing.Point(13, 3);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(94, 25);
+            this.label3.TabIndex = 23;
+            this.label3.Text = "Pacientes";
             // 
             // FrmPacientes
             // 
@@ -142,6 +166,8 @@ namespace ConsultorioDesktop.Forms
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(911, 472);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.chkVerEliminados);
             this.Controls.Add(this.BtnAgregar);
             this.Controls.Add(this.GridTurnos);
@@ -172,5 +198,7 @@ namespace ConsultorioDesktop.Forms
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox TxtBusqueda;
         private System.Windows.Forms.CheckBox chkVerEliminados;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
     }
 }

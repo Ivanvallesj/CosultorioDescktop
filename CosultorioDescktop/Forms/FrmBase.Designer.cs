@@ -29,6 +29,7 @@ namespace ConsultorioDesktop.Forms
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmBase));
             this.chkVerEliminados = new System.Windows.Forms.CheckBox();
             this.BtnEliminar = new System.Windows.Forms.Button();
             this.BtnEditar = new System.Windows.Forms.Button();
@@ -44,7 +45,7 @@ namespace ConsultorioDesktop.Forms
             this.chkVerEliminados.Location = new System.Drawing.Point(548, 209);
             this.chkVerEliminados.Name = "chkVerEliminados";
             this.chkVerEliminados.Size = new System.Drawing.Size(103, 19);
-            this.chkVerEliminados.TabIndex = 16;
+            this.chkVerEliminados.TabIndex = 5;
             this.chkVerEliminados.Text = "Ver Eliminados";
             this.chkVerEliminados.UseVisualStyleBackColor = true;
             this.chkVerEliminados.CheckedChanged += new System.EventHandler(this.chkVerEliminados_CheckedChanged);
@@ -54,7 +55,7 @@ namespace ConsultorioDesktop.Forms
             this.BtnEliminar.Location = new System.Drawing.Point(433, 248);
             this.BtnEliminar.Name = "BtnEliminar";
             this.BtnEliminar.Size = new System.Drawing.Size(86, 30);
-            this.BtnEliminar.TabIndex = 15;
+            this.BtnEliminar.TabIndex = 3;
             this.BtnEliminar.Text = "Eliminar";
             this.BtnEliminar.UseVisualStyleBackColor = true;
             this.BtnEliminar.Click += new System.EventHandler(this.BtnEliminar_Click);
@@ -64,7 +65,7 @@ namespace ConsultorioDesktop.Forms
             this.BtnEditar.Location = new System.Drawing.Point(335, 248);
             this.BtnEditar.Name = "BtnEditar";
             this.BtnEditar.Size = new System.Drawing.Size(83, 30);
-            this.BtnEditar.TabIndex = 14;
+            this.BtnEditar.TabIndex = 2;
             this.BtnEditar.Text = "Editar";
             this.BtnEditar.UseVisualStyleBackColor = true;
             this.BtnEditar.Click += new System.EventHandler(this.BtnEditar_Click);
@@ -74,7 +75,7 @@ namespace ConsultorioDesktop.Forms
             this.BtnNuevo.Location = new System.Drawing.Point(234, 248);
             this.BtnNuevo.Name = "BtnNuevo";
             this.BtnNuevo.Size = new System.Drawing.Size(80, 30);
-            this.BtnNuevo.TabIndex = 13;
+            this.BtnNuevo.TabIndex = 1;
             this.BtnNuevo.Text = "&Nuevo";
             this.BtnNuevo.UseVisualStyleBackColor = true;
             this.BtnNuevo.Click += new System.EventHandler(this.BtnNuevo_Click);
@@ -84,7 +85,7 @@ namespace ConsultorioDesktop.Forms
             this.TxtBusqueda.Location = new System.Drawing.Point(251, 205);
             this.TxtBusqueda.Name = "TxtBusqueda";
             this.TxtBusqueda.Size = new System.Drawing.Size(252, 23);
-            this.TxtBusqueda.TabIndex = 12;
+            this.TxtBusqueda.TabIndex = 4;
             this.TxtBusqueda.TextChanged += new System.EventHandler(this.TxtBusqueda_TextChanged_1);
             // 
             // grid
@@ -112,6 +113,7 @@ namespace ConsultorioDesktop.Forms
             this.Controls.Add(this.BtnNuevo);
             this.Controls.Add(this.TxtBusqueda);
             this.Controls.Add(this.grid);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmBase";
             this.Text = "Formulario Base";
             ((System.ComponentModel.ISupportInitialize)(this.grid)).EndInit();

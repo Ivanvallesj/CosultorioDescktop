@@ -30,6 +30,7 @@ namespace ConsultorioDesktop.Models
         public ObraSocialEnum ObraSocial { get; set; }
         public int DoctorId { get; set; }
         public Doctor Doctor { get; set; }
+        public byte[] Imagen { get; set; }
         
 
     }
