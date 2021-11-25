@@ -64,7 +64,9 @@ namespace ConsultorioDesktop.Forms
                 //columna que quiere seleccionar para que obtenga el valor
                 CboDoctor.ValueMember = "id";
                 var listaDoctores = from doctor in db.Doctores
-                                     select new { id = doctor.Id, nombre = doctor.Nombre };
+                                     select new { id = doctor.Id,
+                                                   Nombre = doctor.Nombre + " " + doctor.Apellido
+                                                };
                 //cargamos el combo de tutores con los existentes en la base de datos
                 CboDoctor.DataSource = listaDoctores.ToList();
                 CboDoctor.SelectedValue = 0;
@@ -124,7 +126,7 @@ namespace ConsultorioDesktop.Forms
                 turnoDetalle.Precio = (int)NumUpDownPrecio.Value;
                 turnoDetalle.Bonos = (int)NumUpDownBonos.Value;
                 turnoDetalle.DoctorId = (int)CboDoctor.SelectedValue;
-                turnoDetalle.PacienteId = (int)CboDoctor.SelectedValue;
+                turnoDetalle.PacienteId = (int)CboPaciente.SelectedValue;
 
                 //si el id del Paciente a editar es nulo agregamos un Calendario a la tabla
                 if (IdEditar == null)

@@ -198,7 +198,7 @@ namespace ConsultorioDesktop.Forms
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "FrmMenuPrincipal";
-            this.Text = "Pantalla principar";
+            this.Text = "Pantalla principal";
             this.TransparencyKey = System.Drawing.Color.Transparent;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Activated += new System.EventHandler(this.FrmMenuPrincipal_Activated_1);

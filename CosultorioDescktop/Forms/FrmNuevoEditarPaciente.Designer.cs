@@ -382,6 +382,7 @@ namespace ConsultorioDesktop.Forms
             this.Controls.Add(this.TxtApellido);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmNuevoEditarPaciente";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Formulario de pacientes";
             ((System.ComponentModel.ISupportInitialize)(this.numUpDtelefono)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NUpDownDni)).EndInit();

@@ -169,7 +169,7 @@ namespace ConsultorioDesktop.Forms
             var frmNuevoEditarTruno = new FrmNuevoEditarTurno(idSeleccionado);
             frmNuevoEditarTruno.ShowDialog();
             ActualizarGrillaTurnos();
-            //GridTurnos.CurrentCell = GridTurnos.Rows[GridTurnos.RowCount -1].Cells[0];
+            GridTurnos.CurrentCell = GridTurnos.Rows[GridTurnos.RowCount -1].Cells[0];
         }
 
         private void TxtBusqueda_TextChanged(object sender, EventArgs e)

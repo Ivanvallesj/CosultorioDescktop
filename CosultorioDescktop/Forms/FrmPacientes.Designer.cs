@@ -84,7 +84,7 @@ namespace ConsultorioDesktop.Forms
             // 
             // BtnNuevo
             // 
-            this.BtnNuevo.Location = new System.Drawing.Point(609, 68);
+            this.BtnNuevo.Location = new System.Drawing.Point(637, 69);
             this.BtnNuevo.Name = "BtnNuevo";
             this.BtnNuevo.Size = new System.Drawing.Size(80, 30);
             this.BtnNuevo.TabIndex = 1;
@@ -94,7 +94,7 @@ namespace ConsultorioDesktop.Forms
             // 
             // BtnEditar
             // 
-            this.BtnEditar.Location = new System.Drawing.Point(695, 68);
+            this.BtnEditar.Location = new System.Drawing.Point(723, 69);
             this.BtnEditar.Name = "BtnEditar";
             this.BtnEditar.Size = new System.Drawing.Size(83, 30);
             this.BtnEditar.TabIndex = 2;
@@ -104,7 +104,7 @@ namespace ConsultorioDesktop.Forms
             // 
             // BtnEliminar
             // 
-            this.BtnEliminar.Location = new System.Drawing.Point(784, 68);
+            this.BtnEliminar.Location = new System.Drawing.Point(812, 69);
             this.BtnEliminar.Name = "BtnEliminar";
             this.BtnEliminar.Size = new System.Drawing.Size(86, 30);
             this.BtnEliminar.TabIndex = 3;
@@ -179,6 +179,7 @@ namespace ConsultorioDesktop.Forms
             this.Controls.Add(this.TxtBusqueda);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmPacientes";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Formulario de Pacientes";
             ((System.ComponentModel.ISupportInitialize)(this.GridTurnos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Grid)).EndInit();

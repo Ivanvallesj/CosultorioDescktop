@@ -40,11 +40,11 @@ namespace ConsultorioDesktop.Forms
                                            select new
                                            {
                                                Id = turno.Id,
+                                               Paciente = turno.Paciente.Apellido + " " + turno.Paciente.Nombre,
                                                Fecha = turno.FechaTurno,
                                                Hora = turno.Hora.ToString("t"),
                                                Tipo = turno.TipoTurno,
                                                Doctor = turno.Doctor.Apellido + " " + turno.Doctor.Nombre,
-                                               Paciente = turno.Paciente.Apellido + " " + turno.Paciente.Nombre,
                                                Eliminado = turno.Eliminado
                                            };
                     grid.DataSource = turnosAListar.IgnoreQueryFilters().Where(c => c.Eliminado == false).ToList();

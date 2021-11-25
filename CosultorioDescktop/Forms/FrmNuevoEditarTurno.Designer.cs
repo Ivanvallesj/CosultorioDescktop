@@ -108,7 +108,7 @@ namespace ConsultorioDesktop.Forms
             this.CboTipoTurno.FormattingEnabled = true;
             this.CboTipoTurno.Location = new System.Drawing.Point(147, 181);
             this.CboTipoTurno.Name = "CboTipoTurno";
-            this.CboTipoTurno.Size = new System.Drawing.Size(121, 23);
+            this.CboTipoTurno.Size = new System.Drawing.Size(227, 23);
             this.CboTipoTurno.TabIndex = 3;
             // 
             // NumUpDownPrecio
@@ -121,7 +121,7 @@ namespace ConsultorioDesktop.Forms
             0,
             0});
             this.NumUpDownPrecio.Name = "NumUpDownPrecio";
-            this.NumUpDownPrecio.Size = new System.Drawing.Size(228, 29);
+            this.NumUpDownPrecio.Size = new System.Drawing.Size(227, 29);
             this.NumUpDownPrecio.TabIndex = 4;
             // 
             // label4
@@ -145,7 +145,7 @@ namespace ConsultorioDesktop.Forms
             0,
             0});
             this.NumUpDownBonos.Name = "NumUpDownBonos";
-            this.NumUpDownBonos.Size = new System.Drawing.Size(228, 29);
+            this.NumUpDownBonos.Size = new System.Drawing.Size(227, 29);
             this.NumUpDownBonos.TabIndex = 5;
             // 
             // label5
@@ -199,9 +199,9 @@ namespace ConsultorioDesktop.Forms
             // 
             // BtnCancelar
             // 
-            this.BtnCancelar.Location = new System.Drawing.Point(582, 380);
+            this.BtnCancelar.Location = new System.Drawing.Point(582, 370);
             this.BtnCancelar.Name = "BtnCancelar";
-            this.BtnCancelar.Size = new System.Drawing.Size(107, 58);
+            this.BtnCancelar.Size = new System.Drawing.Size(107, 38);
             this.BtnCancelar.TabIndex = 9;
             this.BtnCancelar.Text = "Cancelar";
             this.BtnCancelar.UseVisualStyleBackColor = true;
@@ -209,9 +209,9 @@ namespace ConsultorioDesktop.Forms
             // 
             // BtnGuardar
             // 
-            this.BtnGuardar.Location = new System.Drawing.Point(433, 380);
+            this.BtnGuardar.Location = new System.Drawing.Point(433, 370);
             this.BtnGuardar.Name = "BtnGuardar";
-            this.BtnGuardar.Size = new System.Drawing.Size(107, 58);
+            this.BtnGuardar.Size = new System.Drawing.Size(107, 38);
             this.BtnGuardar.TabIndex = 8;
             this.BtnGuardar.Text = "Guardar";
             this.BtnGuardar.UseVisualStyleBackColor = true;
@@ -232,7 +232,7 @@ namespace ConsultorioDesktop.Forms
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(735, 428);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.BtnCancelar);
             this.Controls.Add(this.BtnGuardar);
@@ -252,6 +252,7 @@ namespace ConsultorioDesktop.Forms
             this.Controls.Add(this.LblFechaDeNacimiento);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmNuevoEditarTurno";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Formulario de turnos";
             ((System.ComponentModel.ISupportInitialize)(this.NumUpDownPrecio)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NumUpDownBonos)).EndInit();
